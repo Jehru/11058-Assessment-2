@@ -83,7 +83,7 @@ a:focus {
 .container{ width:1170px; margin:0 auto; position:relative;}
 .site-header{width:100%; z-index:9999; position: relative; }
 .site-header.headerinner{ background-color:#f1f1f1 !important;}
-.logo{float:left;  text-align:center; padding:15px 15px 40px; background-color:#be7b06; position:absolute; -webkit-border-bottom-right-radius: 8px;
+.logo{float:left;  text-align:center; padding:15px 15px 40px; background-color:#303030; position:absolute; -webkit-border-bottom-right-radius: 8px;
 -webkit-border-bottom-left-radius: 8px;
 -moz-border-radius-bottomright: 8px;
 -moz-border-radius-bottomleft: 8px;

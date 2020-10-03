@@ -1,10 +1,10 @@
 # WordPress MySQL database migration
 #
-# Generated: Friday 2. October 2020 03:08 UTC
+# Generated: Friday 2. October 2020 04:34 UTC
 # Hostname: localhost
 # Database: `wordpress`
-# URL: //localhost:8889/wordpress
-# Path: C:\\xampp\\htdocs\\11058-Assessment-2
+# URL: //127.0.0.1/11058-Assessment-2
+# Path: /Applications/MAMP/htdocs/11058-Assessment-2
 # Tables: wp_commentmeta, wp_comments, wp_links, wp_options, wp_postmeta, wp_posts, wp_term_relationships, wp_term_taxonomy, wp_termmeta, wp_terms, wp_usermeta, wp_users
 # Table Prefix: wp_
 # Post Types: revision, nav_menu_item, page, post
@@ -32,9 +32,9 @@ DROP TABLE IF EXISTS `wp_commentmeta`;
 
 CREATE TABLE `wp_commentmeta` (
   `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `comment_id` bigint(20) unsigned NOT NULL DEFAULT 0,
+  `comment_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `meta_key` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `meta_value` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `meta_value` longtext COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`meta_id`),
   KEY `comment_id` (`comment_id`),
   KEY `meta_key` (`meta_key`(191))
@@ -64,7 +64,7 @@ DROP TABLE IF EXISTS `wp_comments`;
 
 CREATE TABLE `wp_comments` (
   `comment_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `comment_post_ID` bigint(20) unsigned NOT NULL DEFAULT 0,
+  `comment_post_ID` bigint(20) unsigned NOT NULL DEFAULT '0',
   `comment_author` tinytext COLLATE utf8mb4_unicode_ci NOT NULL,
   `comment_author_email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `comment_author_url` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -72,12 +72,12 @@ CREATE TABLE `wp_comments` (
   `comment_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `comment_date_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `comment_content` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `comment_karma` int(11) NOT NULL DEFAULT 0,
+  `comment_karma` int(11) NOT NULL DEFAULT '0',
   `comment_approved` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '1',
   `comment_agent` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `comment_type` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'comment',
-  `comment_parent` bigint(20) unsigned NOT NULL DEFAULT 0,
-  `user_id` bigint(20) unsigned NOT NULL DEFAULT 0,
+  `comment_parent` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `user_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`comment_ID`),
   KEY `comment_post_ID` (`comment_post_ID`),
   KEY `comment_approved_date_gmt` (`comment_approved`,`comment_date_gmt`),
@@ -118,8 +118,8 @@ CREATE TABLE `wp_links` (
   `link_target` varchar(25) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `link_description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `link_visible` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Y',
-  `link_owner` bigint(20) unsigned NOT NULL DEFAULT 1,
-  `link_rating` int(11) NOT NULL DEFAULT 0,
+  `link_owner` bigint(20) unsigned NOT NULL DEFAULT '1',
+  `link_rating` int(11) NOT NULL DEFAULT '0',
   `link_updated` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `link_rel` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `link_notes` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -158,15 +158,15 @@ CREATE TABLE `wp_options` (
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`),
   KEY `autoload` (`autoload`)
-) ENGINE=InnoDB AUTO_INCREMENT=394 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=427 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 
 #
 # Data contents of table `wp_options`
 #
 INSERT INTO `wp_options` ( `option_id`, `option_name`, `option_value`, `autoload`) VALUES
-(1, 'siteurl', 'http://localhost:8889/wordpress', 'yes'),
-(2, 'home', 'http://localhost:8889/wordpress', 'yes'),
+(1, 'siteurl', 'http://127.0.0.1/11058-Assessment-2', 'yes'),
+(2, 'home', 'http://127.0.0.1/11058-Assessment-2', 'yes'),
 (3, 'blogname', '11058-Assessment-2', 'yes'),
 (4, 'blogdescription', 'Just another WordPress site', 'yes'),
 (5, 'users_can_register', '0', 'yes'),
@@ -270,7 +270,7 @@ INSERT INTO `wp_options` ( `option_id`, `option_name`, `option_value`, `autoload
 (102, 'widget_archives', 'a:2:{i:2;a:3:{s:5:"title";s:0:"";s:5:"count";i:0;s:8:"dropdown";i:0;}s:12:"_multiwidget";i:1;}', 'yes'),
 (103, 'widget_meta', 'a:2:{i:2;a:1:{s:5:"title";s:0:"";}s:12:"_multiwidget";i:1;}', 'yes'),
 (104, 'sidebars_widgets', 'a:6:{s:19:"wp_inactive_widgets";a:2:{i:0;s:6:"text-2";i:1;s:6:"text-3";}s:9:"sidebar-1";a:6:{i:0;s:8:"search-2";i:1;s:14:"recent-posts-2";i:2;s:17:"recent-comments-2";i:3;s:10:"archives-2";i:4;s:12:"categories-2";i:5;s:6:"meta-2";}s:8:"footer-1";a:0:{}s:8:"footer-2";a:0:{}s:8:"footer-3";a:0:{}s:13:"array_version";i:3;}', 'yes'),
-(105, 'cron', 'a:7:{i:1601609850;a:1:{s:34:"wp_privacy_delete_old_export_files";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:6:"hourly";s:4:"args";a:0:{}s:8:"interval";i:3600;}}}i:1601645850;a:3:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1601689049;a:1:{s:32:"recovery_mode_clean_expired_keys";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1601689058;a:2:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}s:25:"delete_expired_transients";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1601689060;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1601861849;a:1:{s:30:"wp_site_health_scheduled_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:6:"weekly";s:4:"args";a:0:{}s:8:"interval";i:604800;}}}s:7:"version";i:2;}', 'yes'),
+(105, 'cron', 'a:7:{i:1601613450;a:1:{s:34:"wp_privacy_delete_old_export_files";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:6:"hourly";s:4:"args";a:0:{}s:8:"interval";i:3600;}}}i:1601645850;a:3:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1601689049;a:1:{s:32:"recovery_mode_clean_expired_keys";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1601689058;a:2:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}s:25:"delete_expired_transients";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1601689060;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1601861849;a:1:{s:30:"wp_site_health_scheduled_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:6:"weekly";s:4:"args";a:0:{}s:8:"interval";i:604800;}}}s:7:"version";i:2;}', 'yes'),
 (106, 'widget_pages', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (107, 'widget_calendar', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (108, 'widget_media_audio', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
@@ -298,7 +298,7 @@ INSERT INTO `wp_options` ( `option_id`, `option_name`, `option_value`, `autoload
 (349, 'category_children', 'a:0:{}', 'yes'),
 (363, 'theme_mods_wp-bootstrap', 'a:4:{i:0;b:0;s:18:"nav_menu_locations";a:1:{s:7:"primary";i:2;}s:18:"custom_css_post_id";i:-1;s:16:"sidebars_widgets";a:2:{s:4:"time";i:1601600176;s:4:"data";a:5:{s:19:"wp_inactive_widgets";a:2:{i:0;s:6:"text-2";i:1;s:6:"text-3";}s:9:"sidebar-1";a:6:{i:0;s:8:"search-2";i:1;s:14:"recent-posts-2";i:2;s:17:"recent-comments-2";i:3;s:10:"archives-2";i:4;s:12:"categories-2";i:5;s:6:"meta-2";}s:8:"footer-1";a:0:{}s:8:"footer-2";a:0:{}s:8:"footer-3";a:0:{}}}}', 'yes'),
 (364, 'triggered_welcomet', '1', 'yes'),
-(378, 'wpmdb_usage', 'a:2:{s:6:"action";s:8:"savefile";s:4:"time";i:1601608107;}', 'no') ;
+(378, 'wpmdb_usage', 'a:2:{s:6:"action";s:8:"savefile";s:4:"time";i:1601613280;}', 'no') ;
 
 #
 # End of data contents of table `wp_options`
@@ -319,13 +319,13 @@ DROP TABLE IF EXISTS `wp_postmeta`;
 
 CREATE TABLE `wp_postmeta` (
   `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `post_id` bigint(20) unsigned NOT NULL DEFAULT 0,
+  `post_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `meta_key` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `meta_value` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `meta_value` longtext COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB AUTO_INCREMENT=139 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=141 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 
 #
@@ -342,7 +342,7 @@ INSERT INTO `wp_postmeta` ( `meta_id`, `post_id`, `meta_key`, `meta_value`) VALU
 (36, 19, '_menu_item_target', ''),
 (37, 19, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
 (38, 19, '_menu_item_xfn', ''),
-(39, 19, '_menu_item_url', 'http://localhost:8889/wordpress/'),
+(39, 19, '_menu_item_url', 'http://127.0.0.1/11058-Assessment-2/'),
 (40, 19, '_menu_item_orphaned', '1601266496'),
 (41, 20, '_menu_item_type', 'post_type'),
 (42, 20, '_menu_item_menu_item_parent', '0'),
@@ -362,7 +362,7 @@ INSERT INTO `wp_postmeta` ( `meta_id`, `post_id`, `meta_key`, `meta_value`) VALU
 (56, 23, '_menu_item_target', ''),
 (57, 23, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
 (58, 23, '_menu_item_xfn', ''),
-(59, 23, '_menu_item_url', 'http://localhost:8889/wordpress/'),
+(59, 23, '_menu_item_url', 'http://127.0.0.1/11058-Assessment-2/'),
 (60, 23, '_menu_item_orphaned', '1601285377'),
 (61, 24, '_menu_item_type', 'post_type'),
 (62, 24, '_menu_item_menu_item_parent', '0'),
@@ -381,8 +381,8 @@ INSERT INTO `wp_postmeta` ( `meta_id`, `post_id`, `meta_key`, `meta_value`) VALU
 (75, 25, '_menu_item_target', ''),
 (76, 25, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
 (77, 25, '_menu_item_xfn', ''),
-(78, 25, '_menu_item_url', 'http://localhost:8889/wordpress/'),
-(89, 27, '_edit_lock', '1601516754:1'),
+(78, 25, '_menu_item_url', 'http://127.0.0.1/11058-Assessment-2/'),
+(89, 27, '_edit_lock', '1601613242:1'),
 (90, 29, '_edit_lock', '1601516769:1'),
 (91, 31, '_edit_lock', '1601601820:1'),
 (92, 33, '_edit_lock', '1601516791:1'),
@@ -426,7 +426,9 @@ INSERT INTO `wp_postmeta` ( `meta_id`, `post_id`, `meta_key`, `meta_value`) VALU
 (134, 42, '_menu_item_target', ''),
 (135, 42, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
 (136, 42, '_menu_item_xfn', ''),
-(137, 42, '_menu_item_url', '') ;
+(137, 42, '_menu_item_url', ''),
+(139, 27, '_edit_last', '1'),
+(140, 27, '_wp_page_template', 'default') ;
 
 #
 # End of data contents of table `wp_postmeta`
@@ -447,7 +449,7 @@ DROP TABLE IF EXISTS `wp_posts`;
 
 CREATE TABLE `wp_posts` (
   `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `post_author` bigint(20) unsigned NOT NULL DEFAULT 0,
+  `post_author` bigint(20) unsigned NOT NULL DEFAULT '0',
   `post_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `post_date_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `post_content` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -463,52 +465,53 @@ CREATE TABLE `wp_posts` (
   `post_modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `post_modified_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `post_content_filtered` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `post_parent` bigint(20) unsigned NOT NULL DEFAULT 0,
+  `post_parent` bigint(20) unsigned NOT NULL DEFAULT '0',
   `guid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `menu_order` int(11) NOT NULL DEFAULT 0,
+  `menu_order` int(11) NOT NULL DEFAULT '0',
   `post_type` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'post',
   `post_mime_type` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `comment_count` bigint(20) NOT NULL DEFAULT 0,
+  `comment_count` bigint(20) NOT NULL DEFAULT '0',
   PRIMARY KEY (`ID`),
   KEY `post_name` (`post_name`(191)),
   KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`)
-) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 
 #
 # Data contents of table `wp_posts`
 #
 INSERT INTO `wp_posts` ( `ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) VALUES
-(1, 1, '2020-09-20 01:37:29', '2020-09-20 01:37:29', '<!-- wp:paragraph -->\n<p>Welcome to WordPress. This is your first post. Edit or delete it, then start writing!</p>\n<!-- /wp:paragraph -->', 'Hello world!', '', 'publish', 'open', 'open', '', 'hello-world', '', '', '2020-09-20 01:37:29', '2020-09-20 01:37:29', '', 0, 'http://localhost:8889/wordpress/?p=1', 0, 'post', '', 1),
-(2, 1, '2020-09-20 01:37:29', '2020-09-20 01:37:29', '<!-- wp:paragraph -->\n<p>This is an example page. It\'s different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:quote -->\n<blockquote class="wp-block-quote"><p>Hi there! I\'m a bike messenger by day, aspiring actor by night, and this is my website. I live in Los Angeles, have a great dog named Jack, and I like piña coladas. (And gettin\' caught in the rain.)</p></blockquote>\n<!-- /wp:quote -->\n\n<!-- wp:paragraph -->\n<p>...or something like this:</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:quote -->\n<blockquote class="wp-block-quote"><p>The XYZ Doohickey Company was founded in 1971, and has been providing quality doohickeys to the public ever since. Located in Gotham City, XYZ employs over 2,000 people and does all kinds of awesome things for the Gotham community.</p></blockquote>\n<!-- /wp:quote -->\n\n<!-- wp:paragraph -->\n<p>As a new WordPress user, you should go to <a href="http://localhost:8889/wordpress/wp-admin/">your dashboard</a> to delete this page and create new pages for your content. Have fun!</p>\n<!-- /wp:paragraph -->', 'Sample Page', '', 'draft', 'closed', 'open', '', 'sample-page', '', '', '2020-10-01 01:49:20', '2020-10-01 01:49:20', '', 0, 'http://localhost:8889/wordpress/?page_id=2', 0, 'page', '', 0),
-(3, 1, '2020-09-20 01:37:29', '2020-09-20 01:37:29', '<!-- wp:heading --><h2>Who we are</h2><!-- /wp:heading --><!-- wp:paragraph --><p>Our website address is: http://localhost:8889/wordpress.</p><!-- /wp:paragraph --><!-- wp:heading --><h2>What personal data we collect and why we collect it</h2><!-- /wp:heading --><!-- wp:heading {"level":3} --><h3>Comments</h3><!-- /wp:heading --><!-- wp:paragraph --><p>When visitors leave comments on the site we collect the data shown in the comments form, and also the visitor&#8217;s IP address and browser user agent string to help spam detection.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>An anonymised string created from your email address (also called a hash) may be provided to the Gravatar service to see if you are using it. The Gravatar service privacy policy is available here: https://automattic.com/privacy/. After approval of your comment, your profile picture is visible to the public in the context of your comment.</p><!-- /wp:paragraph --><!-- wp:heading {"level":3} --><h3>Media</h3><!-- /wp:heading --><!-- wp:paragraph --><p>If you upload images to the website, you should avoid uploading images with embedded location data (EXIF GPS) included. Visitors to the website can download and extract any location data from images on the website.</p><!-- /wp:paragraph --><!-- wp:heading {"level":3} --><h3>Contact forms</h3><!-- /wp:heading --><!-- wp:heading {"level":3} --><h3>Cookies</h3><!-- /wp:heading --><!-- wp:paragraph --><p>If you leave a comment on our site you may opt-in to saving your name, email address and website in cookies. These are for your convenience so that you do not have to fill in your details again when you leave another comment. These cookies will last for one year.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>If you visit our login page, we will set a temporary cookie to determine if your browser accepts cookies. This cookie contains no personal data and is discarded when you close your browser.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>When you log in, we will also set up several cookies to save your login information and your screen display choices. Login cookies last for two days, and screen options cookies last for a year. If you select &quot;Remember Me&quot;, your login will persist for two weeks. If you log out of your account, the login cookies will be removed.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>If you edit or publish an article, an additional cookie will be saved in your browser. This cookie includes no personal data and simply indicates the post ID of the article you just edited. It expires after 1 day.</p><!-- /wp:paragraph --><!-- wp:heading {"level":3} --><h3>Embedded content from other websites</h3><!-- /wp:heading --><!-- wp:paragraph --><p>Articles on this site may include embedded content (e.g. videos, images, articles, etc.). Embedded content from other websites behaves in the exact same way as if the visitor has visited the other website.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>These websites may collect data about you, use cookies, embed additional third-party tracking, and monitor your interaction with that embedded content, including tracking your interaction with the embedded content if you have an account and are logged in to that website.</p><!-- /wp:paragraph --><!-- wp:heading {"level":3} --><h3>Analytics</h3><!-- /wp:heading --><!-- wp:heading --><h2>Who we share your data with</h2><!-- /wp:heading --><!-- wp:heading --><h2>How long we retain your data</h2><!-- /wp:heading --><!-- wp:paragraph --><p>If you leave a comment, the comment and its metadata are retained indefinitely. This is so we can recognise and approve any follow-up comments automatically instead of holding them in a moderation queue.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>For users that register on our website (if any), we also store the personal information they provide in their user profile. All users can see, edit, or delete their personal information at any time (except they cannot change their username). Website administrators can also see and edit that information.</p><!-- /wp:paragraph --><!-- wp:heading --><h2>What rights you have over your data</h2><!-- /wp:heading --><!-- wp:paragraph --><p>If you have an account on this site, or have left comments, you can request to receive an exported file of the personal data we hold about you, including any data you have provided to us. You can also request that we erase any personal data we hold about you. This does not include any data we are obliged to keep for administrative, legal, or security purposes.</p><!-- /wp:paragraph --><!-- wp:heading --><h2>Where we send your data</h2><!-- /wp:heading --><!-- wp:paragraph --><p>Visitor comments may be checked through an automated spam detection service.</p><!-- /wp:paragraph --><!-- wp:heading --><h2>Your contact information</h2><!-- /wp:heading --><!-- wp:heading --><h2>Additional information</h2><!-- /wp:heading --><!-- wp:heading {"level":3} --><h3>How we protect your data</h3><!-- /wp:heading --><!-- wp:heading {"level":3} --><h3>What data breach procedures we have in place</h3><!-- /wp:heading --><!-- wp:heading {"level":3} --><h3>What third parties we receive data from</h3><!-- /wp:heading --><!-- wp:heading {"level":3} --><h3>What automated decision making and/or profiling we do with user data</h3><!-- /wp:heading --><!-- wp:heading {"level":3} --><h3>Industry regulatory disclosure requirements</h3><!-- /wp:heading -->', 'Privacy Policy', '', 'draft', 'closed', 'open', '', 'privacy-policy', '', '', '2020-09-20 01:37:29', '2020-09-20 01:37:29', '', 0, 'http://localhost:8889/wordpress/?page_id=3', 0, 'page', '', 0),
-(17, 1, '2020-09-27 09:48:01', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2020-09-27 09:48:01', '0000-00-00 00:00:00', '', 0, 'http://localhost:8889/wordpress/?p=17', 0, 'post', '', 0),
-(18, 1, '2020-09-28 04:13:49', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2020-09-28 04:13:49', '0000-00-00 00:00:00', '', 0, 'http://localhost:8889/wordpress/?p=18', 0, 'post', '', 0),
-(19, 1, '2020-09-28 04:14:56', '0000-00-00 00:00:00', '', 'Home', '', 'draft', 'closed', 'closed', '', '', '', '', '2020-09-28 04:14:56', '0000-00-00 00:00:00', '', 0, 'http://localhost:8889/wordpress/?p=19', 1, 'nav_menu_item', '', 0),
-(20, 1, '2020-09-28 04:14:56', '0000-00-00 00:00:00', ' ', '', '', 'draft', 'closed', 'closed', '', '', '', '', '2020-09-28 04:14:56', '0000-00-00 00:00:00', '', 0, 'http://localhost:8889/wordpress/?p=20', 1, 'nav_menu_item', '', 0),
-(21, 1, '2020-09-28 07:45:37', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2020-09-28 07:45:37', '0000-00-00 00:00:00', '', 0, 'http://localhost:8889/wordpress/?page_id=21', 0, 'page', '', 0),
-(22, 1, '2020-09-28 07:48:41', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2020-09-28 07:48:41', '0000-00-00 00:00:00', '', 0, 'http://localhost:8889/wordpress/?page_id=22', 0, 'page', '', 0),
-(23, 1, '2020-09-28 09:29:37', '0000-00-00 00:00:00', '', 'Home', '', 'draft', 'closed', 'closed', '', '', '', '', '2020-09-28 09:29:37', '0000-00-00 00:00:00', '', 0, 'http://localhost:8889/wordpress/?p=23', 1, 'nav_menu_item', '', 0),
-(24, 1, '2020-09-28 09:29:37', '0000-00-00 00:00:00', ' ', '', '', 'draft', 'closed', 'closed', '', '', '', '', '2020-09-28 09:29:37', '0000-00-00 00:00:00', '', 0, 'http://localhost:8889/wordpress/?p=24', 1, 'nav_menu_item', '', 0),
-(25, 1, '2020-10-01 01:47:26', '2020-10-01 01:47:26', '', 'Home', '', 'publish', 'closed', 'closed', '', 'home', '', '', '2020-10-01 01:52:01', '2020-10-01 01:52:01', '', 0, 'http://localhost:8889/wordpress/?p=25', 1, 'nav_menu_item', '', 0),
-(27, 1, '2020-10-01 01:48:17', '2020-10-01 01:48:17', '', 'News', '', 'publish', 'closed', 'closed', '', 'news', '', '', '2020-10-01 01:48:17', '2020-10-01 01:48:17', '', 0, 'http://localhost:8889/wordpress/?page_id=27', 0, 'page', '', 0),
-(28, 1, '2020-10-01 01:48:17', '2020-10-01 01:48:17', '', 'News', '', 'inherit', 'closed', 'closed', '', '27-revision-v1', '', '', '2020-10-01 01:48:17', '2020-10-01 01:48:17', '', 27, 'http://localhost:8889/wordpress/2020/10/01/27-revision-v1/', 0, 'revision', '', 0),
-(29, 1, '2020-10-01 01:48:32', '2020-10-01 01:48:32', '', 'Houses', '', 'publish', 'closed', 'closed', '', 'houses', '', '', '2020-10-01 01:48:32', '2020-10-01 01:48:32', '', 0, 'http://localhost:8889/wordpress/?page_id=29', 0, 'page', '', 0),
-(30, 1, '2020-10-01 01:48:32', '2020-10-01 01:48:32', '', 'Houses', '', 'inherit', 'closed', 'closed', '', '29-revision-v1', '', '', '2020-10-01 01:48:32', '2020-10-01 01:48:32', '', 29, 'http://localhost:8889/wordpress/2020/10/01/29-revision-v1/', 0, 'revision', '', 0),
-(31, 1, '2020-10-01 01:48:42', '2020-10-01 01:48:42', '', 'Architects', '', 'publish', 'closed', 'closed', '', 'architects', '', '', '2020-10-01 01:48:42', '2020-10-01 01:48:42', '', 0, 'http://localhost:8889/wordpress/?page_id=31', 0, 'page', '', 0),
-(32, 1, '2020-10-01 01:48:42', '2020-10-01 01:48:42', '', 'Architects', '', 'inherit', 'closed', 'closed', '', '31-revision-v1', '', '', '2020-10-01 01:48:42', '2020-10-01 01:48:42', '', 31, 'http://localhost:8889/wordpress/2020/10/01/31-revision-v1/', 0, 'revision', '', 0),
-(33, 1, '2020-10-01 01:48:52', '2020-10-01 01:48:52', '', 'Locations', '', 'publish', 'closed', 'closed', '', 'locations', '', '', '2020-10-01 01:48:52', '2020-10-01 01:48:52', '', 0, 'http://localhost:8889/wordpress/?page_id=33', 0, 'page', '', 0),
-(34, 1, '2020-10-01 01:48:52', '2020-10-01 01:48:52', '', 'Locations', '', 'inherit', 'closed', 'closed', '', '33-revision-v1', '', '', '2020-10-01 01:48:52', '2020-10-01 01:48:52', '', 33, 'http://localhost:8889/wordpress/2020/10/01/33-revision-v1/', 0, 'revision', '', 0),
-(35, 1, '2020-10-01 01:49:20', '2020-10-01 01:49:20', '<!-- wp:paragraph -->\n<p>This is an example page. It\'s different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:quote -->\n<blockquote class="wp-block-quote"><p>Hi there! I\'m a bike messenger by day, aspiring actor by night, and this is my website. I live in Los Angeles, have a great dog named Jack, and I like piña coladas. (And gettin\' caught in the rain.)</p></blockquote>\n<!-- /wp:quote -->\n\n<!-- wp:paragraph -->\n<p>...or something like this:</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:quote -->\n<blockquote class="wp-block-quote"><p>The XYZ Doohickey Company was founded in 1971, and has been providing quality doohickeys to the public ever since. Located in Gotham City, XYZ employs over 2,000 people and does all kinds of awesome things for the Gotham community.</p></blockquote>\n<!-- /wp:quote -->\n\n<!-- wp:paragraph -->\n<p>As a new WordPress user, you should go to <a href="http://localhost:8889/wordpress/wp-admin/">your dashboard</a> to delete this page and create new pages for your content. Have fun!</p>\n<!-- /wp:paragraph -->', 'Sample Page', '', 'inherit', 'closed', 'closed', '', '2-revision-v1', '', '', '2020-10-01 01:49:20', '2020-10-01 01:49:20', '', 2, 'http://localhost:8889/wordpress/2020/10/01/2-revision-v1/', 0, 'revision', '', 0),
-(36, 1, '2020-10-01 01:49:51', '2020-10-01 01:49:51', ' ', '', '', 'publish', 'closed', 'closed', '', '36', '', '', '2020-10-01 01:52:01', '2020-10-01 01:52:01', '', 0, 'http://localhost:8889/wordpress/?p=36', 5, 'nav_menu_item', '', 0),
-(37, 1, '2020-10-01 01:49:51', '2020-10-01 01:49:51', ' ', '', '', 'publish', 'closed', 'closed', '', '37', '', '', '2020-10-01 01:52:01', '2020-10-01 01:52:01', '', 0, 'http://localhost:8889/wordpress/?p=37', 3, 'nav_menu_item', '', 0),
-(38, 1, '2020-10-01 01:49:51', '2020-10-01 01:49:51', ' ', '', '', 'publish', 'closed', 'closed', '', '38', '', '', '2020-10-01 01:52:01', '2020-10-01 01:52:01', '', 0, 'http://localhost:8889/wordpress/?p=38', 4, 'nav_menu_item', '', 0),
-(39, 1, '2020-10-01 01:49:51', '2020-10-01 01:49:51', ' ', '', '', 'publish', 'closed', 'closed', '', '39', '', '', '2020-10-01 01:52:01', '2020-10-01 01:52:01', '', 0, 'http://localhost:8889/wordpress/?p=39', 2, 'nav_menu_item', '', 0),
-(40, 1, '2020-10-01 01:51:39', '2020-10-01 01:51:39', '', 'About', '', 'publish', 'closed', 'closed', '', 'about', '', '', '2020-10-01 01:51:40', '2020-10-01 01:51:40', '', 0, 'http://localhost:8889/wordpress/?page_id=40', 0, 'page', '', 0),
-(41, 1, '2020-10-01 01:51:40', '2020-10-01 01:51:40', '', 'About', '', 'inherit', 'closed', 'closed', '', '40-revision-v1', '', '', '2020-10-01 01:51:40', '2020-10-01 01:51:40', '', 40, 'http://localhost:8889/wordpress/2020/10/01/40-revision-v1/', 0, 'revision', '', 0),
-(42, 1, '2020-10-01 01:52:01', '2020-10-01 01:52:01', ' ', '', '', 'publish', 'closed', 'closed', '', '42', '', '', '2020-10-01 01:52:01', '2020-10-01 01:52:01', '', 0, 'http://localhost:8889/wordpress/?p=42', 6, 'nav_menu_item', '', 0) ;
+(1, 1, '2020-09-20 01:37:29', '2020-09-20 01:37:29', '<!-- wp:paragraph -->\n<p>Welcome to WordPress. This is your first post. Edit or delete it, then start writing!</p>\n<!-- /wp:paragraph -->', 'Hello world!', '', 'publish', 'open', 'open', '', 'hello-world', '', '', '2020-09-20 01:37:29', '2020-09-20 01:37:29', '', 0, 'http://127.0.0.1/11058-Assessment-2/?p=1', 0, 'post', '', 1),
+(2, 1, '2020-09-20 01:37:29', '2020-09-20 01:37:29', '<!-- wp:paragraph -->\n<p>This is an example page. It\'s different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:quote -->\n<blockquote class="wp-block-quote"><p>Hi there! I\'m a bike messenger by day, aspiring actor by night, and this is my website. I live in Los Angeles, have a great dog named Jack, and I like piña coladas. (And gettin\' caught in the rain.)</p></blockquote>\n<!-- /wp:quote -->\n\n<!-- wp:paragraph -->\n<p>...or something like this:</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:quote -->\n<blockquote class="wp-block-quote"><p>The XYZ Doohickey Company was founded in 1971, and has been providing quality doohickeys to the public ever since. Located in Gotham City, XYZ employs over 2,000 people and does all kinds of awesome things for the Gotham community.</p></blockquote>\n<!-- /wp:quote -->\n\n<!-- wp:paragraph -->\n<p>As a new WordPress user, you should go to <a href="http://127.0.0.1/11058-Assessment-2/wp-admin/">your dashboard</a> to delete this page and create new pages for your content. Have fun!</p>\n<!-- /wp:paragraph -->', 'Sample Page', '', 'draft', 'closed', 'open', '', 'sample-page', '', '', '2020-10-01 01:49:20', '2020-10-01 01:49:20', '', 0, 'http://127.0.0.1/11058-Assessment-2/?page_id=2', 0, 'page', '', 0),
+(3, 1, '2020-09-20 01:37:29', '2020-09-20 01:37:29', '<!-- wp:heading --><h2>Who we are</h2><!-- /wp:heading --><!-- wp:paragraph --><p>Our website address is: http://127.0.0.1/11058-Assessment-2.</p><!-- /wp:paragraph --><!-- wp:heading --><h2>What personal data we collect and why we collect it</h2><!-- /wp:heading --><!-- wp:heading {"level":3} --><h3>Comments</h3><!-- /wp:heading --><!-- wp:paragraph --><p>When visitors leave comments on the site we collect the data shown in the comments form, and also the visitor&#8217;s IP address and browser user agent string to help spam detection.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>An anonymised string created from your email address (also called a hash) may be provided to the Gravatar service to see if you are using it. The Gravatar service privacy policy is available here: https://automattic.com/privacy/. After approval of your comment, your profile picture is visible to the public in the context of your comment.</p><!-- /wp:paragraph --><!-- wp:heading {"level":3} --><h3>Media</h3><!-- /wp:heading --><!-- wp:paragraph --><p>If you upload images to the website, you should avoid uploading images with embedded location data (EXIF GPS) included. Visitors to the website can download and extract any location data from images on the website.</p><!-- /wp:paragraph --><!-- wp:heading {"level":3} --><h3>Contact forms</h3><!-- /wp:heading --><!-- wp:heading {"level":3} --><h3>Cookies</h3><!-- /wp:heading --><!-- wp:paragraph --><p>If you leave a comment on our site you may opt-in to saving your name, email address and website in cookies. These are for your convenience so that you do not have to fill in your details again when you leave another comment. These cookies will last for one year.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>If you visit our login page, we will set a temporary cookie to determine if your browser accepts cookies. This cookie contains no personal data and is discarded when you close your browser.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>When you log in, we will also set up several cookies to save your login information and your screen display choices. Login cookies last for two days, and screen options cookies last for a year. If you select &quot;Remember Me&quot;, your login will persist for two weeks. If you log out of your account, the login cookies will be removed.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>If you edit or publish an article, an additional cookie will be saved in your browser. This cookie includes no personal data and simply indicates the post ID of the article you just edited. It expires after 1 day.</p><!-- /wp:paragraph --><!-- wp:heading {"level":3} --><h3>Embedded content from other websites</h3><!-- /wp:heading --><!-- wp:paragraph --><p>Articles on this site may include embedded content (e.g. videos, images, articles, etc.). Embedded content from other websites behaves in the exact same way as if the visitor has visited the other website.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>These websites may collect data about you, use cookies, embed additional third-party tracking, and monitor your interaction with that embedded content, including tracking your interaction with the embedded content if you have an account and are logged in to that website.</p><!-- /wp:paragraph --><!-- wp:heading {"level":3} --><h3>Analytics</h3><!-- /wp:heading --><!-- wp:heading --><h2>Who we share your data with</h2><!-- /wp:heading --><!-- wp:heading --><h2>How long we retain your data</h2><!-- /wp:heading --><!-- wp:paragraph --><p>If you leave a comment, the comment and its metadata are retained indefinitely. This is so we can recognise and approve any follow-up comments automatically instead of holding them in a moderation queue.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>For users that register on our website (if any), we also store the personal information they provide in their user profile. All users can see, edit, or delete their personal information at any time (except they cannot change their username). Website administrators can also see and edit that information.</p><!-- /wp:paragraph --><!-- wp:heading --><h2>What rights you have over your data</h2><!-- /wp:heading --><!-- wp:paragraph --><p>If you have an account on this site, or have left comments, you can request to receive an exported file of the personal data we hold about you, including any data you have provided to us. You can also request that we erase any personal data we hold about you. This does not include any data we are obliged to keep for administrative, legal, or security purposes.</p><!-- /wp:paragraph --><!-- wp:heading --><h2>Where we send your data</h2><!-- /wp:heading --><!-- wp:paragraph --><p>Visitor comments may be checked through an automated spam detection service.</p><!-- /wp:paragraph --><!-- wp:heading --><h2>Your contact information</h2><!-- /wp:heading --><!-- wp:heading --><h2>Additional information</h2><!-- /wp:heading --><!-- wp:heading {"level":3} --><h3>How we protect your data</h3><!-- /wp:heading --><!-- wp:heading {"level":3} --><h3>What data breach procedures we have in place</h3><!-- /wp:heading --><!-- wp:heading {"level":3} --><h3>What third parties we receive data from</h3><!-- /wp:heading --><!-- wp:heading {"level":3} --><h3>What automated decision making and/or profiling we do with user data</h3><!-- /wp:heading --><!-- wp:heading {"level":3} --><h3>Industry regulatory disclosure requirements</h3><!-- /wp:heading -->', 'Privacy Policy', '', 'draft', 'closed', 'open', '', 'privacy-policy', '', '', '2020-09-20 01:37:29', '2020-09-20 01:37:29', '', 0, 'http://127.0.0.1/11058-Assessment-2/?page_id=3', 0, 'page', '', 0),
+(17, 1, '2020-09-27 09:48:01', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2020-09-27 09:48:01', '0000-00-00 00:00:00', '', 0, 'http://127.0.0.1/11058-Assessment-2/?p=17', 0, 'post', '', 0),
+(18, 1, '2020-09-28 04:13:49', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2020-09-28 04:13:49', '0000-00-00 00:00:00', '', 0, 'http://127.0.0.1/11058-Assessment-2/?p=18', 0, 'post', '', 0),
+(19, 1, '2020-09-28 04:14:56', '0000-00-00 00:00:00', '', 'Home', '', 'draft', 'closed', 'closed', '', '', '', '', '2020-09-28 04:14:56', '0000-00-00 00:00:00', '', 0, 'http://127.0.0.1/11058-Assessment-2/?p=19', 1, 'nav_menu_item', '', 0),
+(20, 1, '2020-09-28 04:14:56', '0000-00-00 00:00:00', ' ', '', '', 'draft', 'closed', 'closed', '', '', '', '', '2020-09-28 04:14:56', '0000-00-00 00:00:00', '', 0, 'http://127.0.0.1/11058-Assessment-2/?p=20', 1, 'nav_menu_item', '', 0),
+(21, 1, '2020-09-28 07:45:37', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2020-09-28 07:45:37', '0000-00-00 00:00:00', '', 0, 'http://127.0.0.1/11058-Assessment-2/?page_id=21', 0, 'page', '', 0),
+(22, 1, '2020-09-28 07:48:41', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2020-09-28 07:48:41', '0000-00-00 00:00:00', '', 0, 'http://127.0.0.1/11058-Assessment-2/?page_id=22', 0, 'page', '', 0),
+(23, 1, '2020-09-28 09:29:37', '0000-00-00 00:00:00', '', 'Home', '', 'draft', 'closed', 'closed', '', '', '', '', '2020-09-28 09:29:37', '0000-00-00 00:00:00', '', 0, 'http://127.0.0.1/11058-Assessment-2/?p=23', 1, 'nav_menu_item', '', 0),
+(24, 1, '2020-09-28 09:29:37', '0000-00-00 00:00:00', ' ', '', '', 'draft', 'closed', 'closed', '', '', '', '', '2020-09-28 09:29:37', '0000-00-00 00:00:00', '', 0, 'http://127.0.0.1/11058-Assessment-2/?p=24', 1, 'nav_menu_item', '', 0),
+(25, 1, '2020-10-01 01:47:26', '2020-10-01 01:47:26', '', 'Home', '', 'publish', 'closed', 'closed', '', 'home', '', '', '2020-10-01 01:52:01', '2020-10-01 01:52:01', '', 0, 'http://127.0.0.1/11058-Assessment-2/?p=25', 1, 'nav_menu_item', '', 0),
+(27, 1, '2020-10-01 01:48:17', '2020-10-01 01:48:17', 'Mid-Century Modernist Bus Tour:\r\nGrounds &amp; Friends\r\n\r\nJoin renowned architecture enthusiast, Martin Miles on a bus tour around Canberra’s best architecture including mid-century modernist icons by Grounds and other architects.\r\n\r\nRoy Grounds (1905-1981) was a renowned Victorian architect and a leader in Australia’s modern architecture movement. During his early career he spent some time working in the United States and England and after the war he was involved in setting up the curriculum for the School of Architecture at the University of Melbourne. Between 1953 and 1962, Grounds was part of the Grounds, Romberg and Boyd partnership, in which time he designed the Australian Academy of Science in Canberra.\r\n\r\nThis tour will pick-up and drop-off from the Corner of Parkes Pl W and Queen Elizabeth Terrace. After the tour, participants are invited to Sunday Sessions – music by local acts, a series of large-scale graphic interventions, and an award-winning architectural pop-up wine bar, the Pop Inn.\r\n\r\n----\r\n\r\nMid-Century Modernist Bus Tour:\r\nBoyd &amp; Friends\r\n\r\nJoin renowned architecture enthusiast, Martin Miles on a bus tour around Canberra’s best architecture including mid-century modernist icons by Boyd and other architects.\r\n\r\nRobin Boyd (1919-1971), born and educated in Melbourne, was a distinguished architect, writer and social commentator and throughout the 1940s and 1950s was Australia’s leading proponent of the modern movement. Boyd held a lifelong interest in modern architecture tempered by regional concerns. His early work employed structuralist solutions to overcome what he considered to be the deficiencies of most housing of the period and he was a leading practitioner of the post-war Melbourne regional style. The suburban house was often the focus of Boyd’s efforts, both in design and writing, and he enjoyed relatively few opportunities to design major buildings.\r\n\r\nThis tour will pick-up and drop-off from the corner of Watson Street and Gould Street in Turner. After the tour, participants are invited to Sunday Sessions – music by local acts, a series of large-scale graphic interventions, and an award-winning architectural pop-up wine bar, the Pop Inn.\r\n\r\n&nbsp;\r\n\r\n----\r\n\r\n&nbsp;\r\n\r\nMid Century Modern Tour #3\r\n\r\nUse and Re-Use\r\n\r\nBack by popular demand, this year’s architecture tours will take their cue from the Design Canberra theme: geometry. The Design Canberra festival will celebrate the strong geometry present throughout our city and the ways it creates human, creative and global connections.\r\n\r\nThe tours will introduce people to architects who have used geometric forms in a variety of ways to shape spaces for people. How have the designers of these houses and buildings used geometric principles to create dwellings that comfort and inspire their occupants? From simple rectilinear forms and modular designs to complex examples using the Pythagorean spiral and hemicycle, we’ll visit some of Canberra’s most significant houses and buildings.\r\n\r\nThis tour looks at the future of mid-century design. We’ll visit mid-century houses, an embassy and a church. How are they meeting the needs of occupants today, and how are people adapting them for current and future needs?\r\n\r\nThe tours will be presented by local architecture enthusiast and author of Canberra House, Martin Miles. The tours will also feature a variety of special guests, including internationally renowned architects and planners. Please meet at the Civic Square bus stop at 8:50am. (Buses will depart and return to this location each week.)\r\n\r\nPlease note that the bus, as well as some locations, will require stair access as well as moderate walking. Please contact us if you have any questions regarding accessibility.\r\n\r\nPhoto: https://designcanberrafestival.com.au/wp-content/uploads/2018/09/DC-Website-banner-65.png\r\n\r\n&nbsp;\r\n\r\n&nbsp;\r\n\r\nPhoto: https://designcanberrafestival.com.au/wp-content/uploads/2018/09/DC-Website-banner-43.png', 'News', '', 'publish', 'closed', 'closed', '', 'news', '', '', '2020-10-02 04:34:02', '2020-10-02 04:34:02', '', 0, 'http://127.0.0.1/11058-Assessment-2/?page_id=27', 0, 'page', '', 0),
+(28, 1, '2020-10-01 01:48:17', '2020-10-01 01:48:17', '', 'News', '', 'inherit', 'closed', 'closed', '', '27-revision-v1', '', '', '2020-10-01 01:48:17', '2020-10-01 01:48:17', '', 27, 'http://127.0.0.1/11058-Assessment-2/2020/10/01/27-revision-v1/', 0, 'revision', '', 0),
+(29, 1, '2020-10-01 01:48:32', '2020-10-01 01:48:32', '', 'Houses', '', 'publish', 'closed', 'closed', '', 'houses', '', '', '2020-10-01 01:48:32', '2020-10-01 01:48:32', '', 0, 'http://127.0.0.1/11058-Assessment-2/?page_id=29', 0, 'page', '', 0),
+(30, 1, '2020-10-01 01:48:32', '2020-10-01 01:48:32', '', 'Houses', '', 'inherit', 'closed', 'closed', '', '29-revision-v1', '', '', '2020-10-01 01:48:32', '2020-10-01 01:48:32', '', 29, 'http://127.0.0.1/11058-Assessment-2/2020/10/01/29-revision-v1/', 0, 'revision', '', 0),
+(31, 1, '2020-10-01 01:48:42', '2020-10-01 01:48:42', '', 'Architects', '', 'publish', 'closed', 'closed', '', 'architects', '', '', '2020-10-01 01:48:42', '2020-10-01 01:48:42', '', 0, 'http://127.0.0.1/11058-Assessment-2/?page_id=31', 0, 'page', '', 0),
+(32, 1, '2020-10-01 01:48:42', '2020-10-01 01:48:42', '', 'Architects', '', 'inherit', 'closed', 'closed', '', '31-revision-v1', '', '', '2020-10-01 01:48:42', '2020-10-01 01:48:42', '', 31, 'http://127.0.0.1/11058-Assessment-2/2020/10/01/31-revision-v1/', 0, 'revision', '', 0),
+(33, 1, '2020-10-01 01:48:52', '2020-10-01 01:48:52', '', 'Locations', '', 'publish', 'closed', 'closed', '', 'locations', '', '', '2020-10-01 01:48:52', '2020-10-01 01:48:52', '', 0, 'http://127.0.0.1/11058-Assessment-2/?page_id=33', 0, 'page', '', 0),
+(34, 1, '2020-10-01 01:48:52', '2020-10-01 01:48:52', '', 'Locations', '', 'inherit', 'closed', 'closed', '', '33-revision-v1', '', '', '2020-10-01 01:48:52', '2020-10-01 01:48:52', '', 33, 'http://127.0.0.1/11058-Assessment-2/2020/10/01/33-revision-v1/', 0, 'revision', '', 0),
+(35, 1, '2020-10-01 01:49:20', '2020-10-01 01:49:20', '<!-- wp:paragraph -->\n<p>This is an example page. It\'s different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:quote -->\n<blockquote class="wp-block-quote"><p>Hi there! I\'m a bike messenger by day, aspiring actor by night, and this is my website. I live in Los Angeles, have a great dog named Jack, and I like piña coladas. (And gettin\' caught in the rain.)</p></blockquote>\n<!-- /wp:quote -->\n\n<!-- wp:paragraph -->\n<p>...or something like this:</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:quote -->\n<blockquote class="wp-block-quote"><p>The XYZ Doohickey Company was founded in 1971, and has been providing quality doohickeys to the public ever since. Located in Gotham City, XYZ employs over 2,000 people and does all kinds of awesome things for the Gotham community.</p></blockquote>\n<!-- /wp:quote -->\n\n<!-- wp:paragraph -->\n<p>As a new WordPress user, you should go to <a href="http://127.0.0.1/11058-Assessment-2/wp-admin/">your dashboard</a> to delete this page and create new pages for your content. Have fun!</p>\n<!-- /wp:paragraph -->', 'Sample Page', '', 'inherit', 'closed', 'closed', '', '2-revision-v1', '', '', '2020-10-01 01:49:20', '2020-10-01 01:49:20', '', 2, 'http://127.0.0.1/11058-Assessment-2/2020/10/01/2-revision-v1/', 0, 'revision', '', 0),
+(36, 1, '2020-10-01 01:49:51', '2020-10-01 01:49:51', ' ', '', '', 'publish', 'closed', 'closed', '', '36', '', '', '2020-10-01 01:52:01', '2020-10-01 01:52:01', '', 0, 'http://127.0.0.1/11058-Assessment-2/?p=36', 5, 'nav_menu_item', '', 0),
+(37, 1, '2020-10-01 01:49:51', '2020-10-01 01:49:51', ' ', '', '', 'publish', 'closed', 'closed', '', '37', '', '', '2020-10-01 01:52:01', '2020-10-01 01:52:01', '', 0, 'http://127.0.0.1/11058-Assessment-2/?p=37', 3, 'nav_menu_item', '', 0),
+(38, 1, '2020-10-01 01:49:51', '2020-10-01 01:49:51', ' ', '', '', 'publish', 'closed', 'closed', '', '38', '', '', '2020-10-01 01:52:01', '2020-10-01 01:52:01', '', 0, 'http://127.0.0.1/11058-Assessment-2/?p=38', 4, 'nav_menu_item', '', 0),
+(39, 1, '2020-10-01 01:49:51', '2020-10-01 01:49:51', ' ', '', '', 'publish', 'closed', 'closed', '', '39', '', '', '2020-10-01 01:52:01', '2020-10-01 01:52:01', '', 0, 'http://127.0.0.1/11058-Assessment-2/?p=39', 2, 'nav_menu_item', '', 0),
+(40, 1, '2020-10-01 01:51:39', '2020-10-01 01:51:39', '', 'About', '', 'publish', 'closed', 'closed', '', 'about', '', '', '2020-10-01 01:51:40', '2020-10-01 01:51:40', '', 0, 'http://127.0.0.1/11058-Assessment-2/?page_id=40', 0, 'page', '', 0),
+(41, 1, '2020-10-01 01:51:40', '2020-10-01 01:51:40', '', 'About', '', 'inherit', 'closed', 'closed', '', '40-revision-v1', '', '', '2020-10-01 01:51:40', '2020-10-01 01:51:40', '', 40, 'http://127.0.0.1/11058-Assessment-2/2020/10/01/40-revision-v1/', 0, 'revision', '', 0),
+(42, 1, '2020-10-01 01:52:01', '2020-10-01 01:52:01', ' ', '', '', 'publish', 'closed', 'closed', '', '42', '', '', '2020-10-01 01:52:01', '2020-10-01 01:52:01', '', 0, 'http://127.0.0.1/11058-Assessment-2/?p=42', 6, 'nav_menu_item', '', 0),
+(43, 1, '2020-10-02 04:34:02', '2020-10-02 04:34:02', 'Mid-Century Modernist Bus Tour:\r\nGrounds &amp; Friends\r\n\r\nJoin renowned architecture enthusiast, Martin Miles on a bus tour around Canberra’s best architecture including mid-century modernist icons by Grounds and other architects.\r\n\r\nRoy Grounds (1905-1981) was a renowned Victorian architect and a leader in Australia’s modern architecture movement. During his early career he spent some time working in the United States and England and after the war he was involved in setting up the curriculum for the School of Architecture at the University of Melbourne. Between 1953 and 1962, Grounds was part of the Grounds, Romberg and Boyd partnership, in which time he designed the Australian Academy of Science in Canberra.\r\n\r\nThis tour will pick-up and drop-off from the Corner of Parkes Pl W and Queen Elizabeth Terrace. After the tour, participants are invited to Sunday Sessions – music by local acts, a series of large-scale graphic interventions, and an award-winning architectural pop-up wine bar, the Pop Inn.\r\n\r\n----\r\n\r\nMid-Century Modernist Bus Tour:\r\nBoyd &amp; Friends\r\n\r\nJoin renowned architecture enthusiast, Martin Miles on a bus tour around Canberra’s best architecture including mid-century modernist icons by Boyd and other architects.\r\n\r\nRobin Boyd (1919-1971), born and educated in Melbourne, was a distinguished architect, writer and social commentator and throughout the 1940s and 1950s was Australia’s leading proponent of the modern movement. Boyd held a lifelong interest in modern architecture tempered by regional concerns. His early work employed structuralist solutions to overcome what he considered to be the deficiencies of most housing of the period and he was a leading practitioner of the post-war Melbourne regional style. The suburban house was often the focus of Boyd’s efforts, both in design and writing, and he enjoyed relatively few opportunities to design major buildings.\r\n\r\nThis tour will pick-up and drop-off from the corner of Watson Street and Gould Street in Turner. After the tour, participants are invited to Sunday Sessions – music by local acts, a series of large-scale graphic interventions, and an award-winning architectural pop-up wine bar, the Pop Inn.\r\n\r\n&nbsp;\r\n\r\n----\r\n\r\n&nbsp;\r\n\r\nMid Century Modern Tour #3\r\n\r\nUse and Re-Use\r\n\r\nBack by popular demand, this year’s architecture tours will take their cue from the Design Canberra theme: geometry. The Design Canberra festival will celebrate the strong geometry present throughout our city and the ways it creates human, creative and global connections.\r\n\r\nThe tours will introduce people to architects who have used geometric forms in a variety of ways to shape spaces for people. How have the designers of these houses and buildings used geometric principles to create dwellings that comfort and inspire their occupants? From simple rectilinear forms and modular designs to complex examples using the Pythagorean spiral and hemicycle, we’ll visit some of Canberra’s most significant houses and buildings.\r\n\r\nThis tour looks at the future of mid-century design. We’ll visit mid-century houses, an embassy and a church. How are they meeting the needs of occupants today, and how are people adapting them for current and future needs?\r\n\r\nThe tours will be presented by local architecture enthusiast and author of Canberra House, Martin Miles. The tours will also feature a variety of special guests, including internationally renowned architects and planners. Please meet at the Civic Square bus stop at 8:50am. (Buses will depart and return to this location each week.)\r\n\r\nPlease note that the bus, as well as some locations, will require stair access as well as moderate walking. Please contact us if you have any questions regarding accessibility.\r\n\r\nPhoto: https://designcanberrafestival.com.au/wp-content/uploads/2018/09/DC-Website-banner-65.png\r\n\r\n&nbsp;\r\n\r\n&nbsp;\r\n\r\nPhoto: https://designcanberrafestival.com.au/wp-content/uploads/2018/09/DC-Website-banner-43.png', 'News', '', 'inherit', 'closed', 'closed', '', '27-revision-v1', '', '', '2020-10-02 04:34:02', '2020-10-02 04:34:02', '', 27, 'http://127.0.0.1/11058-Assessment-2/2020/10/02/27-revision-v1/', 0, 'revision', '', 0) ;
 
 #
 # End of data contents of table `wp_posts`
@@ -528,9 +531,9 @@ DROP TABLE IF EXISTS `wp_term_relationships`;
 #
 
 CREATE TABLE `wp_term_relationships` (
-  `object_id` bigint(20) unsigned NOT NULL DEFAULT 0,
-  `term_taxonomy_id` bigint(20) unsigned NOT NULL DEFAULT 0,
-  `term_order` int(11) NOT NULL DEFAULT 0,
+  `object_id` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `term_taxonomy_id` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `term_order` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`object_id`,`term_taxonomy_id`),
   KEY `term_taxonomy_id` (`term_taxonomy_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -567,11 +570,11 @@ DROP TABLE IF EXISTS `wp_term_taxonomy`;
 
 CREATE TABLE `wp_term_taxonomy` (
   `term_taxonomy_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `term_id` bigint(20) unsigned NOT NULL DEFAULT 0,
+  `term_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `taxonomy` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `description` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `parent` bigint(20) unsigned NOT NULL DEFAULT 0,
-  `count` bigint(20) NOT NULL DEFAULT 0,
+  `parent` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `count` bigint(20) NOT NULL DEFAULT '0',
   PRIMARY KEY (`term_taxonomy_id`),
   UNIQUE KEY `term_id_taxonomy` (`term_id`,`taxonomy`),
   KEY `taxonomy` (`taxonomy`)
@@ -604,9 +607,9 @@ DROP TABLE IF EXISTS `wp_termmeta`;
 
 CREATE TABLE `wp_termmeta` (
   `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `term_id` bigint(20) unsigned NOT NULL DEFAULT 0,
+  `term_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `meta_key` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `meta_value` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `meta_value` longtext COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`meta_id`),
   KEY `term_id` (`term_id`),
   KEY `meta_key` (`meta_key`(191))
@@ -638,7 +641,7 @@ CREATE TABLE `wp_terms` (
   `term_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `slug` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `term_group` bigint(10) NOT NULL DEFAULT 0,
+  `term_group` bigint(10) NOT NULL DEFAULT '0',
   PRIMARY KEY (`term_id`),
   KEY `slug` (`slug`(191)),
   KEY `name` (`name`(191))
@@ -671,13 +674,13 @@ DROP TABLE IF EXISTS `wp_usermeta`;
 
 CREATE TABLE `wp_usermeta` (
   `umeta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `user_id` bigint(20) unsigned NOT NULL DEFAULT 0,
+  `user_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `meta_key` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `meta_value` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `meta_value` longtext COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`umeta_id`),
   KEY `user_id` (`user_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 
 #
@@ -699,11 +702,12 @@ INSERT INTO `wp_usermeta` ( `umeta_id`, `user_id`, `meta_key`, `meta_value`) VAL
 (13, 1, 'wp_user_level', '10'),
 (14, 1, 'dismissed_wp_pointers', ''),
 (15, 1, 'show_welcome_panel', '1'),
-(16, 1, 'session_tokens', 'a:2:{s:64:"59d9e19cba99e90db5a3beff267a04acd50c8eab0bc24768f5162481640999d9";a:4:{s:10:"expiration";i:1601071750;s:2:"ip";s:3:"::1";s:2:"ua";s:115:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36";s:5:"login";i:1600898950;}s:64:"1117a2ceeb3496ccd46c00311d563f4fef56636672ea3f9defd0172b4b05eaea";a:4:{s:10:"expiration";i:1602108568;s:2:"ip";s:3:"::1";s:2:"ua";s:115:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36";s:5:"login";i:1600898968;}}'),
+(16, 1, 'session_tokens', 'a:4:{s:64:"1117a2ceeb3496ccd46c00311d563f4fef56636672ea3f9defd0172b4b05eaea";a:4:{s:10:"expiration";i:1602108568;s:2:"ip";s:3:"::1";s:2:"ua";s:115:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36";s:5:"login";i:1600898968;}s:64:"199d2be93b0556dec6c16049c7fd058e0da08582504449111e33a72cc11c5828";a:4:{s:10:"expiration";i:1601785461;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:119:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Safari/605.1.15";s:5:"login";i:1601612661;}s:64:"6582e0049af02525a5101a83ec1e65a308171407c81576e1e6ecf533e9a9bcaa";a:4:{s:10:"expiration";i:1601785471;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:119:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Safari/605.1.15";s:5:"login";i:1601612671;}s:64:"f8cb49d49c3ac74b28ec92c8fccace192ca829f5e9e29026a096e9cf6a22e910";a:4:{s:10:"expiration";i:1601785505;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:119:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Safari/605.1.15";s:5:"login";i:1601612705;}}'),
 (17, 1, 'wp_dashboard_quick_press_last_post_id', '17'),
 (18, 1, 'managenav-menuscolumnshidden', 'a:5:{i:0;s:11:"link-target";i:1;s:11:"css-classes";i:2;s:3:"xfn";i:3;s:11:"description";i:4;s:15:"title-attribute";}'),
 (19, 1, 'metaboxhidden_nav-menus', 'a:2:{i:0;s:12:"add-post_tag";i:1;s:15:"add-post_format";}'),
-(20, 1, 'nav_menu_recently_edited', '2') ;
+(20, 1, 'nav_menu_recently_edited', '2'),
+(21, 1, 'community-events-location', 'a:1:{s:2:"ip";s:9:"127.0.0.0";}') ;
 
 #
 # End of data contents of table `wp_usermeta`
@@ -731,7 +735,7 @@ CREATE TABLE `wp_users` (
   `user_url` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `user_registered` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `user_activation_key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `user_status` int(11) NOT NULL DEFAULT 0,
+  `user_status` int(11) NOT NULL DEFAULT '0',
   `display_name` varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   PRIMARY KEY (`ID`),
   KEY `user_login_key` (`user_login`),
@@ -744,7 +748,7 @@ CREATE TABLE `wp_users` (
 # Data contents of table `wp_users`
 #
 INSERT INTO `wp_users` ( `ID`, `user_login`, `user_pass`, `user_nicename`, `user_email`, `user_url`, `user_registered`, `user_activation_key`, `user_status`, `display_name`) VALUES
-(1, 'jehru', '$P$BUZsv88TxFCG/GZA93zaMPwezTLMzm1', 'jehru', 'jehru.e.harris@gmail.com', 'http://localhost:8889/wordpress', '2020-09-20 01:37:29', '', 0, 'jehru') ;
+(1, 'jehru', '$P$BUZsv88TxFCG/GZA93zaMPwezTLMzm1', 'jehru', 'jehru.e.harris@gmail.com', 'http://127.0.0.1/11058-Assessment-2', '2020-09-20 01:37:29', '', 0, 'jehru') ;
 
 #
 # End of data contents of table `wp_users`

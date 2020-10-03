@@ -16,6 +16,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="profile" href="http://gmpg.org/xfn/11">
+
+    <!-- Css Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;400;600;700&display=swap" rel="stylesheet">
+
 <?php wp_head(); ?>
 </head>
 
@@ -32,7 +36,9 @@
                             <img src="<?php echo esc_url(get_theme_mod( 'wp_bootstrap_starter_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
                         </a>
                     <?php else : ?>
-                        <a class="site-title" href="<?php echo esc_url( home_url( '/' )); ?>"><?php esc_url(bloginfo('name')); ?></a>
+                    <!-- If no logo is present -->
+                        <a class="site-title" href="<?php echo esc_url( home_url( '/' )); ?>">
+                        <?php echo nl2br ("MID CENTURY \n CANBERRA") // esc_url(bloginfo('name')); ?></a>
                     <?php endif; ?>
 
                 </div>
@@ -56,7 +62,7 @@
 
             </nav>
         </div>
-	</header><!-- #masthead -->
+	</header> <!-- #masthead -->
     <?php if(is_front_page() && !get_theme_mod( 'header_banner_visibility' )): ?>
         <div id="page-sub-header" <?php if(has_header_image()) { ?>style="background-image: url('<?php header_image(); ?>');" <?php } ?>>
             <div class="container">

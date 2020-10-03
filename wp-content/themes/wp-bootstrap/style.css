@@ -1036,3 +1036,12 @@ body:not(.theme-preset-active) footer#colophon {
     font-size: 75%;
   }
 }
+
+
+/*--------------------------------------------------------------
+# Custom CSS
+--------------------------------------------------------------*/
+
+html body {
+  font-family: 'Work Sans', sans-serif;
+}

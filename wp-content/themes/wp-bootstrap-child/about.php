@@ -7,7 +7,7 @@ get_header(); ?>
 	<!-- <section id="primary" class="content-area col-sm-12 col-lg-8"> -->
 
 	<!-- Sets full width site -->
-	<section id="primary" class="content-area col-5 col-sm-12">
+	<section id="primary" class="content-area col-sm-12">
 
 		<main id="main" class="site-main" role="main">
 
@@ -15,8 +15,6 @@ get_header(); ?>
 			while ( have_posts() ) : the_post();
 
 				get_template_part( 'template-parts/content', 'page' );
-
-				if ( figure )
 
                 // If comments are open or we have at least one comment, load up the comment template.
                 if ( comments_open() || get_comments_number() ) :

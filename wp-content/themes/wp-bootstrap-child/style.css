@@ -34,6 +34,7 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
 	## Galleries
 # Woocommerce
 # Footer
+# Custom CSS
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Normalize
@@ -285,10 +286,13 @@ body {
   /*--------------------------------------------------------------
   # Navigation
   --------------------------------------------------------------*/
+  
+  /* Changed the background colour */
+  /* Customised the colour and removed the box shadow */
   header#masthead {
     margin-bottom: 0;
-    background-color: #303030 ;
-    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
+    background-color: #fff ;
+    /* box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1); */
     padding: .74rem 1rem;
   }
   
@@ -364,22 +368,26 @@ body {
     padding-right: 0;
   }
   
+  /* Customised the colour */
   body:not(.theme-preset-active) #masthead .navbar-nav > li > a {
-    color: #ffffff;
+    color: #303030;
     padding: 0.5rem;
     font-weight: 500;
     font-size: 0.875rem;
   }
   
+  /* Changed what happens when the user hovers over the links */
+  /* Customised the effect and the colour */
   body:not(.theme-preset-active) #masthead .navbar-nav > li > a:hover,
   body:not(.theme-preset-active) #masthead .navbar-nav > li.current_page_item > a {
-    color: #fff;
-    /* font-weight: 600; */
+    color: #303030;
     border-bottom: 3px solid;
+
+    /* font-weight: 600; */
     /* text-decoration: underline; */
     /*background: #f9f9f9;*/
   }
-  
+
   .navbar-brand {
     height: auto;
   }
@@ -1045,6 +1053,13 @@ body {
   # Custom CSS
   --------------------------------------------------------------*/
   
-  html body {
+  /* Changing the default font to Work Sans */
+  /* This font better fit the look for the site with nice capitalised letters */
+html body {
     font-family: 'Work Sans', sans-serif;
-  }
+}
+
+  /*  Custom Header  */
+header#masthead {
+
+}

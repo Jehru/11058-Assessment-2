@@ -1,4 +1,4 @@
-<?php /* Template Name: about-page */ ?>
+<?php /* Template Name: contact-page */ ?>
 
 <?php
 

@@ -247,6 +247,8 @@ body {
   h1.entry-title {
     font-size: 1.31rem;
     border-bottom: 1px solid #eaecef;
+    /* Customised the text transform property */
+    text-transform: uppercase;
   }
   h2.entry-title {
     border-bottom: 1px solid #eaecef;

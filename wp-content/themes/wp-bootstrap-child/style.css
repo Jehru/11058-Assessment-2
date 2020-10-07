@@ -368,25 +368,59 @@ body {
     padding-right: 0;
   }
   
-  /* Customised the colour */
+  /* Header Links */
   body:not(.theme-preset-active) #masthead .navbar-nav > li > a {
     color: #303030;
     padding: 0.5rem;
     font-weight: 500;
     font-size: 0.875rem;
+    /* text-transform: uppercase; */
+
+
+    /* Custom Position, needed for the underline animation to work  */
+    position: relative;
   }
   
-  /* Changed what happens when the user hovers over the links */
-  /* Customised the effect and the colour */
-  body:not(.theme-preset-active) #masthead .navbar-nav > li > a:hover,
+  /* On-Hover Effect */
+  /* Changed what happens when the user hovers over the links, Customised the effect and the colour */
+
+  /* Original effect */
+  /* body:not(.theme-preset-active) #masthead .navbar-nav > li > a:hover,
   body:not(.theme-preset-active) #masthead .navbar-nav > li.current_page_item > a {
     color: #303030;
-    border-bottom: 3px solid;
+    font-weight: 600;
+    background: #f9f9f9;
+  } */
+  
 
-    /* font-weight: 600; */
-    /* text-decoration: underline; */
-    /*background: #f9f9f9;*/
+  /* New Animated Underline Effect */
+  /* Hidden underline that is 2px long and is black */
+  /* Needed to be -2px at the bottom or the current page would conflict with the animation */
+  body:not(.theme-preset-active) #masthead .navbar-nav > li > a:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #303030;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
   }
+
+  /* Makes the underline visible */
+  body:not(.theme-preset-active) #masthead .navbar-nav > li > a:hover:before {
+    visibility: visible;
+    width: 100%;
+  }
+
+  /* Current page  */
+  body:not(.theme-preset-active) #masthead .navbar-nav > li.current_page_item > a {
+    color: #303030;
+    border-bottom: 2px solid
+  }
+
+  /* End CSS Underline Effect*/
 
   .navbar-brand {
     height: auto;

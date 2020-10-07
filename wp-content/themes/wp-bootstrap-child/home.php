@@ -6,9 +6,7 @@
     The blog page will become the news page. All blogs will need to be set as posts, not pages. 
  -->
 
-<?php
-
-get_header(); ?>
+<?php get_header(); ?>
 
 	<!-- <section id="primary" class="content-area col-sm-12 col-lg-8"> -->
 

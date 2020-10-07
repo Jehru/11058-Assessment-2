@@ -1093,7 +1093,11 @@ html body {
     font-family: 'Work Sans', sans-serif;
 }
 
-  /*  Custom Header  */
-header#masthead {
-
-}
+  /*  Custom home page image */
+  .home-image {
+    width: 80%
+  }
+  /* Font class which is on top of the image */
+  .has-large-font-size {
+    font-weight: 700; 
+  }

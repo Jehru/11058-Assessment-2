@@ -36,16 +36,14 @@
                             <img src="<?php echo esc_url(get_theme_mod( 'wp_bootstrap_starter_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
                         </a>
                     <?php else : ?>
-                    <!-- If no logo is present -->
-                        <!-- <a class="site-title" href="<?php //echo esc_url( home_url( '/' )); ?>"> -->
-                        <a class="" href="<?php echo esc_url( home_url( '/' )); ?>">
-                        <?php // echo nl2br ("MID CENTURY \n CANBERRA"); // esc_url(bloginfo('name')); ?>
-
-                        <!-- TESTING -->
-                        MID CENTURY
-                        </a> 
+                    <!-- If no logo is present, which is true -->
+                            <a class="site-title" href="<?php echo esc_url( home_url( '/' )); ?>">
+                                <?php esc_url(bloginfo('name')); ?>
+                            </a>
                         <br>
-                        <a class="canberra-text" href="<?php echo esc_url( home_url( '/' )); ?>"> CANBERRA </a>
+                            <a class="canberra-text" href="<?php echo esc_url( home_url( '/' )); ?>">
+                                <?php esc_url(bloginfo('description'));?>
+                            </a>
 
                     <?php endif; ?>
                 </div>

@@ -298,6 +298,8 @@ body {
     padding: .74rem 1rem;
   }
   
+  /* Customised navbar brand */
+  /* Added padding so that there wasnt any space in the logo that the user couldnt click */
   .navbar-brand > a {
     color: rgba(0, 0, 0, 0.9);
     font-size: 1.1rem;
@@ -305,6 +307,7 @@ body {
     text-decoration: none;
     color: #303030;
     font-weight: 700;
+    padding:5px;
   }
   
   .navbar-brand > a:visited, .navbar-brand > a:hover {
@@ -1102,22 +1105,24 @@ html body {
   width: 80%
 }
 /* Font class which is on top of the image */
-.has-large-font-size {
+/* .has-large-font-size {
   font-weight: 700; 
-}
-
+} */
+ 
+/* Logo Custom spacing */
 /* Changes the kerning of the "Canberra" text   */
 .canberra-text {
   letter-spacing: 0.22rem;
   
 }
 
+/* Ivory Search CSS */
 /* Customising the Menu search function */
 .navbar-search{
   top: 3.5px;
   /* width: 455px; */
 }
 
-.search-close {
-  top:12px;
-}
+  .search-close {
+    top:12px;
+  }

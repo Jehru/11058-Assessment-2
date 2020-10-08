@@ -322,7 +322,7 @@ body {
     font-size: 1.25rem;
     background-size: cover !important;
   }
-  
+
   body:not(.theme-preset-active) #page-sub-header h1 {
     line-height: 1.6;
     font-size: 4rem;
@@ -362,6 +362,7 @@ body {
       margin: 0 auto;
     }
   }
+
   /*--------------------------------------------------------------
   ## Links
   --------------------------------------------------------------*/

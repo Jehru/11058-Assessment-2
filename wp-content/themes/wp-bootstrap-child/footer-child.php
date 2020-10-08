@@ -1,12 +1,8 @@
 <?php
 /**
- * The template for displaying the footer
+ * The child template for displaying the footer
  *
  * Contains the closing of the #content div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package WP_Bootstrap_Starter
  */
 
 ?>
@@ -18,9 +14,8 @@
 	<footer id="colophon" class="site-footer <?php echo wp_bootstrap_starter_bg_class(); ?>" role="contentinfo">
 		<div class="container pt-3 pb-3">
             <div class="site-info">
-				&copy; <?php echo date('Y'); ?> <?php echo '<a href="'.home_url().'">'.get_bloginfo('name').'</a>'; ?> 
-                <span class="sep"> | </span>
-                <a class="credits" href="https://afterimagedesigns.com/wp-bootstrap-starter/" target="_blank" title="WordPress Technical Support" alt="Bootstrap WordPress Theme"><?php //echo esc_html__('Bootstrap WordPress Theme','wp-bootstrap-starter'); ?></a>
+				<?php echo nl2br ("This website was produced by students in the Faculty of Arts & Design, University of Canberra. \n  The text and images reproduced on this site were generously provided by <a href='http://www.canberrahouse.com.au'> Canberra House </a>")  
+				?>  
             </div><!-- close .site-info -->
 		</div>
 	</footer><!-- #colophon -->

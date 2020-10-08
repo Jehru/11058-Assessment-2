@@ -25,4 +25,4 @@
 <?php
 // No Sidebar 
 // get_sidebar();
-get_footer();
+get_footer('child');

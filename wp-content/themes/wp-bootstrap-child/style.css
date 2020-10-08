@@ -303,7 +303,7 @@ body {
     font-size: 1.1rem;
     outline: medium none;
     text-decoration: none;
-    color: #fff;
+    color: #303030;
     font-weight: 700;
   }
   
@@ -419,12 +419,14 @@ body {
   /* Current page  */
   body:not(.theme-preset-active) #masthead .navbar-nav > li.current_page_item > a {
     color: #303030;
-    border-bottom: 2px solid
+    border-bottom: 2px solid;
   }
 
   /* End CSS Underline Effect*/
 
   .navbar-brand {
+    /* Changed the posititon so that the "Canberra" text would appear below the "Mid century" text  */
+    position: relative;
     height: auto;
   }
   
@@ -1095,11 +1097,27 @@ html body {
     font-family: 'Work Sans', sans-serif;
 }
 
-  /*  Custom home page image */
-  .home-image {
-    width: 80%
-  }
-  /* Font class which is on top of the image */
-  .has-large-font-size {
-    font-weight: 700; 
-  }
+/*  Custom home page image */
+.home-image {
+  width: 80%
+}
+/* Font class which is on top of the image */
+.has-large-font-size {
+  font-weight: 700; 
+}
+
+/* Changes the kerning of the "Canberra" text   */
+.canberra-text {
+  letter-spacing: 0.22rem;
+  
+}
+
+/* Customising the Menu search function */
+.navbar-search{
+  top: 3.5px;
+  /* width: 455px; */
+}
+
+.search-close {
+  top:12px;
+}

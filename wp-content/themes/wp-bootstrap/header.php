@@ -37,11 +37,19 @@
                         </a>
                     <?php else : ?>
                     <!-- If no logo is present -->
-                        <a class="site-title" href="<?php echo esc_url( home_url( '/' )); ?>">
-                        <?php echo nl2br ("MID CENTURY \n CANBERRA") // esc_url(bloginfo('name')); ?></a>
-                    <?php endif; ?>
+                        <!-- <a class="site-title" href="<?php //echo esc_url( home_url( '/' )); ?>"> -->
+                        <a class="" href="<?php echo esc_url( home_url( '/' )); ?>">
+                        <?php // echo nl2br ("MID CENTURY \n CANBERRA"); // esc_url(bloginfo('name')); ?>
 
+                        <!-- TESTING -->
+                        MID CENTURY
+                        </a> 
+                        <br>
+                        <a class="canberra-text" href="<?php echo esc_url( home_url( '/' )); ?>"> CANBERRA </a>
+
+                    <?php endif; ?>
                 </div>
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>

@@ -316,7 +316,7 @@ header#masthead {
 body:not(.theme-preset-active) #page-sub-header h1 {
   line-height: 1.6;
   font-size: 4rem;
-  color: #563e7c;
+  color: #303030;
   margin: 0 0 1rem;
   border: 0;
   padding: 0;
@@ -364,7 +364,7 @@ a.page-scroller {
 }
 
 body:not(.theme-preset-active) #masthead .navbar-nav > li > a {
-  color: #cdbfe3;
+  color: #ffffff;
   padding: 0.5rem;
   font-weight: 500;
   font-size: 0.875rem;
@@ -373,7 +373,9 @@ body:not(.theme-preset-active) #masthead .navbar-nav > li > a {
 body:not(.theme-preset-active) #masthead .navbar-nav > li > a:hover,
 body:not(.theme-preset-active) #masthead .navbar-nav > li.current_page_item > a {
   color: #fff;
-  font-weight: 600;
+  /* font-weight: 600; */
+  border-bottom: 3px solid;
+  /* text-decoration: underline; */
   /*background: #f9f9f9;*/
 }
 

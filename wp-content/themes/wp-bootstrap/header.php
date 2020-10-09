@@ -36,12 +36,18 @@
                             <img src="<?php echo esc_url(get_theme_mod( 'wp_bootstrap_starter_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
                         </a>
                     <?php else : ?>
-                    <!-- If no logo is present -->
-                        <a class="site-title" href="<?php echo esc_url( home_url( '/' )); ?>">
-                        <?php echo nl2br ("MID CENTURY \n CANBERRA") // esc_url(bloginfo('name')); ?></a>
-                    <?php endif; ?>
+                    <!-- If no logo is present, which is true -->
+                            <a class="site-title" href="<?php echo esc_url( home_url( '/' )); ?>">
+                                <?php esc_url(bloginfo('name')); ?>
+                            </a>
+                        <br>
+                            <a class="canberra-text" href="<?php echo esc_url( home_url( '/' )); ?>">
+                                <?php esc_url(bloginfo('description'));?>
+                            </a>
 
+                    <?php endif; ?>
                 </div>
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -62,7 +68,9 @@
 
             </nav>
         </div>
-	</header> <!-- #masthead -->
+    </header> <!-- #masthead -->
+
+    <!-- Added a class to the div that has bootstrap applied -->
     <?php if(is_front_page() && !get_theme_mod( 'header_banner_visibility' )): ?>
         <div id="page-sub-header" <?php if(has_header_image()) { ?>style="background-image: url('<?php header_image(); ?>');" <?php } ?>>
             <div class="container">
@@ -71,7 +79,7 @@
                     if(get_theme_mod( 'header_banner_title_setting' )){
                         echo get_theme_mod( 'header_banner_title_setting' );
                     }else{
-                        echo 'WordPress + Bootstrap';
+                        echo ('WP Bootstrap Framework');
                     }
                     ?>
                 </h1>
@@ -80,11 +88,11 @@
                     if(get_theme_mod( 'header_banner_tagline_setting' )){
                         echo get_theme_mod( 'header_banner_tagline_setting' );
                 }else{
-                        echo esc_html__('To customize the contents of this header banner and other elements of your site, go to Dashboard > Appearance > Customize','wp-bootstrap-starter');
+                        echo esc_html__('To customize the contents of this header banner and other elements of your site go to Dashboard - Appearance - Customize ');
                     }
                     ?>
                 </p>
-                <a href="#content" class="page-scroller"><i class="fa fa-fw fa-angle-down"></i></a>
+                <!-- <a href="#content" class="page-scroller"><i class="fa fa-fw fa-angle-down"></i></a> -->
             </div>
         </div>
     <?php endif; ?>

@@ -1127,3 +1127,8 @@ html body {
   .search-close {
     top:12px;
   }
+
+  /* Custom Contact Form */
+#wpforms-159-field_2-container {
+  width: 60%;
+}

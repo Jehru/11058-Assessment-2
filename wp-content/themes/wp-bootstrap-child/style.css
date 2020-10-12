@@ -547,8 +547,12 @@ body {
     #masthead .navbar-nav > li > a {
       padding-bottom: 0.625rem;
       padding-top: 0.313rem;
+
+      /* Removes the border on devices with max width 991px */
+      transition: unset;
+      border-bottom: 0 !important;
     }
-  
+    
     .navbar-light .navbar-toggler {
       border: medium none;
       outline: none;
@@ -1027,6 +1031,8 @@ body {
   
   .copyright a, footer#colophon a {
     color: inherit;
+    /* Customised the text underline effect */
+    text-decoration-line: underline;
   }
   
   @media screen and (max-width: 767px) {

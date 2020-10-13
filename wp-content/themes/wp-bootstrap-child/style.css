@@ -340,6 +340,8 @@ body {
   }
   body:not(.theme-preset-active) #page-sub-header p {
   color: #212529;
+  /* Customised font weight */
+  font-weight: 500;
   }
   a.page-scroller {
     color: #333;
@@ -352,8 +354,10 @@ body {
     body:not(.theme-preset-active) #page-sub-header h1 {
       font-size: 3.750rem;
     }
+    /* Added a bottom padding so that the header image has height */
     body:not(.theme-preset-active) #page-sub-header {
       font-size: 1.25rem;
+      /* padding-bottom: 200px; */
     }
   }
   @media screen and (min-width: 992px) {
@@ -381,7 +385,6 @@ body {
     font-weight: 500;
     font-size: 0.875rem;
     /* text-transform: uppercase; */
-
 
     /* Custom Position, needed for the underline animation to work  */
     position: relative;
@@ -533,7 +536,9 @@ body {
       top: 1.375rem;
     }
   }
-  @media screen and (max-width: 991px) {
+
+  /* 991px */
+  @media screen and (max-width: 1200px) {
     .navbar-nav .dropdown-menu {
       border: medium none;
       margin-left: 1.250rem;
@@ -547,13 +552,29 @@ body {
     #masthead .navbar-nav > li > a {
       padding-bottom: 0.625rem;
       padding-top: 0.313rem;
+
+      /* Removes the border on devices with max width 991px */
+      transition: unset;
+      border-bottom: 0 !important;
     }
-  
+
+    /* Hides the underline effect */
+    body:not(.theme-preset-active) #masthead .navbar-nav > li > a:hover:before {
+      visibility: hidden;
+    }
+
+    /* Gives the default underline effect */
+    /* However on a mobile device this effect should probably not be noticeable */
+    body:not(.theme-preset-active) #masthead .navbar-nav > li > a:hover {
+    text-decoration: underline;
+    }
+
     .navbar-light .navbar-toggler {
       border: medium none;
       outline: none;
     }
   }
+  
   .site-main .comment-navigation,
   .site-main .posts-navigation,
   .site-main .post-navigation {
@@ -762,9 +783,10 @@ body {
   /*--------------------------------------------------------------
   ## Posts and pages
   --------------------------------------------------------------*/
+  /* Customised the topp padding by reducing it by one so the home page content sits better  */
   #content.site-content {
     padding-bottom: 3.75rem;
-    padding-top: 4.125rem;
+    padding-top: 3.125rem;
   }
   
   .sticky .entry-title::before {
@@ -1027,6 +1049,8 @@ body {
   
   .copyright a, footer#colophon a {
     color: inherit;
+    /* Customised the text underline effect */
+    text-decoration-line: underline;
   }
   
   @media screen and (max-width: 767px) {
@@ -1127,3 +1151,8 @@ html body {
   .search-close {
     top:12px;
   }
+
+  /* Custom Contact Form */
+#wpforms-159-field_2-container {
+  width: 60%;
+}

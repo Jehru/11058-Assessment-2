@@ -326,7 +326,7 @@ body {
   body:not(.theme-preset-active) #page-sub-header h1 {
     line-height: 1.6;
     font-size: 4rem;
-    color: #303030;
+    color: #fff;
     margin: 0 0 1rem;
     border: 0;
     padding: 0;
@@ -339,7 +339,7 @@ body {
     font-weight: 300;
   }
   body:not(.theme-preset-active) #page-sub-header p {
-  color: #212529;
+  color: #9a9a9a;
   /* Customised font weight */
   font-weight: 500;
   }
@@ -357,7 +357,7 @@ body {
     /* Added a bottom padding so that the header image has height */
     body:not(.theme-preset-active) #page-sub-header {
       font-size: 1.25rem;
-      /* padding-bottom: 200px; */
+      padding-bottom: 40vh;
     }
   }
   @media screen and (min-width: 992px) {
@@ -788,6 +788,12 @@ body {
     padding-bottom: 3.75rem;
     padding-top: 3.125rem;
   }
+
+  /* Home page no top padding */
+  #content.site-content-home {
+    padding-bottom: 3.75rem;
+    /* padding-top: 3.125rem; */
+  }
   
   .sticky .entry-title::before {
     content: '\f08d';
@@ -1155,4 +1161,23 @@ html body {
   /* Custom Contact Form */
 #wpforms-159-field_2-container {
   width: 60%;
+}
+
+/* The darken sets a very dark background colour behind the image*/
+.darken {
+  background: rgba(0, 0, 0, 0.9);
+  margin: 0 30vh;
+  padding: 25px;
+}
+
+@media screen and (max-width: 887px) {
+  .darken {
+    background: rgba(0, 0, 0, 0.7);
+    margin: 0;
+    padding: 25px;
+  }
+
+  body:not(.theme-preset-active) #page-sub-header p {
+    color: white;
+  }
 }

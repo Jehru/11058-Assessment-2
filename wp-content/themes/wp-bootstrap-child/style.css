@@ -340,7 +340,7 @@ body {
     font-weight: 300;
   }
   body:not(.theme-preset-active) #page-sub-header p {
-  color: #9a9a9a;
+  color: white;
   /* Customised font weight */
   font-weight: 500;
   }
@@ -1170,17 +1170,13 @@ html body {
   padding: 125px;
 }
 
+
 /* What happens on screens less than 870px and greater than 600px */
 @media screen and (min-width: 870px) {
   .darken {
     background: rgba(0, 0, 0, 0.5);
     padding: 125px;
   }
-
-  body:not(.theme-preset-active) #page-sub-header p {
-    color: white;
-  }
-
 }
 
 /* What happens on screens less than 1291px and greater than 870px */
@@ -1188,10 +1184,6 @@ html body {
   .darken {
     background: rgba(0, 0, 0, 0.5);
     padding: 20vh;
-  }
-
-  body:not(.theme-preset-active) #page-sub-header p {
-    color: white;
   }
 }
 
@@ -1201,13 +1193,18 @@ html body {
     background: rgba(0, 0, 0, 0.5);
     padding: 34vh;
   }
+  /* Higher screen size may give better contrast, grey is the preferred colour. */
+  body:not(.theme-preset-active) #page-sub-header p {
+    color: #d4d4d4;
+  }
+
 }
 
 /* What happens on small screens less than 500px */
 @media screen and (max-width: 600px) {
   .darken {
     background: rgba(0, 0, 0, 0.5);
-    padding: 25px;
+    padding: 40px;
   }
 
   body:not(.theme-preset-active) #page-sub-header h1 {
@@ -1215,7 +1212,6 @@ html body {
   }
 
   body:not(.theme-preset-active) #page-sub-header p {
-    color: white;
     font-size: 1rem;
   }
 

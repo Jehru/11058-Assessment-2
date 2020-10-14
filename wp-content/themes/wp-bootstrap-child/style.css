@@ -316,7 +316,8 @@ body {
   
   #page-sub-header {
     position: relative;
-    padding-top: 5rem;
+    /* Changing where the text is located  */
+    /* padding-top: 20rem; */
     padding-bottom: 0;
     text-align: center;
     font-size: 1.25rem;
@@ -357,7 +358,6 @@ body {
     /* Added a bottom padding so that the header image has height */
     body:not(.theme-preset-active) #page-sub-header {
       font-size: 1.25rem;
-      padding-bottom: 40vh;
     }
   }
   @media screen and (min-width: 992px) {
@@ -1164,20 +1164,59 @@ html body {
 }
 
 /* The darken sets a very dark background colour behind the image*/
+/* This happens on screens greater than 1568px */
 .darken {
-  background: rgba(0, 0, 0, 0.9);
-  margin: 0 30vh;
-  padding: 25px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 125px;
 }
 
-@media screen and (max-width: 887px) {
+/* What happens on screens less than 870px and greater than 600px */
+@media screen and (min-width: 870px) {
   .darken {
-    background: rgba(0, 0, 0, 0.7);
-    margin: 0;
-    padding: 25px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 125px;
   }
 
   body:not(.theme-preset-active) #page-sub-header p {
     color: white;
   }
+
+}
+
+/* What happens on screens less than 1291px and greater than 870px */
+@media screen and (min-width: 1291px) {
+  .darken {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20vh;
+  }
+
+  body:not(.theme-preset-active) #page-sub-header p {
+    color: white;
+  }
+}
+
+/* What happens on screens less than 1568px and greater than 1291px */
+@media screen and (min-width: 1568px) {
+  .darken {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 34vh;
+  }
+}
+
+/* What happens on small screens less than 500px */
+@media screen and (max-width: 600px) {
+  .darken {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 25px;
+  }
+
+  body:not(.theme-preset-active) #page-sub-header h1 {
+    font-size: 2rem;
+  }
+
+  body:not(.theme-preset-active) #page-sub-header p {
+    color: white;
+    font-size: 1rem;
+  }
+
 }

@@ -6,7 +6,8 @@
  *
  * @package WP_Bootstrap_Starter
  */
-// See the one in the child theme
+
+// This one is being overloaded on the main theme
 
 get_header(); ?>
 
@@ -15,7 +16,6 @@ get_header(); ?>
 
 		<?php
 		if ( have_posts() ) : ?>
-
 			<header class="page-header">
 				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'wp-bootstrap-starter' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 			</header><!-- .page-header -->
@@ -23,14 +23,14 @@ get_header(); ?>
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
-
 				/**
 				 * Run the loop for the search to output the results.
 				 * If you want to overload this in a child theme then include a file
 				 * called content-search.php and that will be used instead.
 				 */
 				// get_template_part( 'template-parts/content', 'search' );
-				get_template_part ('../wp-bootstrap-child/content', 'search');
+				get_template_part ('template/content', 'search');
+
 
 			endwhile;
 
@@ -47,4 +47,4 @@ get_header(); ?>
 
 <?php
 get_sidebar();
-get_footer();
+get_footer('child');

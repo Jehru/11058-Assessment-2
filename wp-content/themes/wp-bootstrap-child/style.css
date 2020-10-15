@@ -834,8 +834,9 @@ body {
     margin-top: 0;
   }
   
+   /* Customised the bottom CSS for the search items */ 
   .post.hentry {
-    margin-bottom: 4rem;
+    margin-bottom: 8rem;
   }
   
   .posted-on, .byline, .comments-link {
@@ -1246,3 +1247,19 @@ html body {
     }
 
   }
+
+.search-item-image {
+  float: left;
+}
+
+.search-item-text {
+  display: inline;
+}
+
+  .search-item-text p {
+    margin-left: 12.5em
+  }
+
+.entry-footer {
+  margin-left: 12.5em;
+}

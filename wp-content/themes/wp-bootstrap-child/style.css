@@ -1214,5 +1214,18 @@ html body {
   body:not(.theme-preset-active) #page-sub-header p {
     font-size: 1rem;
   }
+}
+
+/* Custom paragraph spacing for single column paragraphs  */
+.wrapper-single-column {
+  margin: 1.5em 13em;
+}
+
+/* When screen is less than 991px then the side paddding is less */
+@media screen and (max-width: 991px) {
+
+  .wrapper-single-column {
+    margin: 1.5em 5em;
+  }
 
 }

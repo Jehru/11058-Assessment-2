@@ -1188,6 +1188,37 @@ html body {
 }
 
 
+/* Overextend the form width so that it appears longer when besides an image */
+.wpforms-container {
+  width: 170% !important;
+}
+
+/* When the screen goes into 600px then change it so its not going beyond the screen */
+@media screen and (max-width: 600px){
+
+  .wpforms-container {
+    width: 100% !important ;
+  }
+
+}
+
+@media screen and (min-width: 992px){
+
+  .wpforms-container {
+    width: 130% !important ;
+  }
+
+}
+
+
+@media screen and (min-width: 1200px){
+
+  .wpforms-container {
+    width: 170% !important ;
+  }
+
+}
+
 /* --------------------------- */
 /* CSS for the main home page  */
 /* --------------------------- */
@@ -1281,3 +1312,4 @@ html body {
 .entry-footer {
   margin-left: 12.5em;
 }
+

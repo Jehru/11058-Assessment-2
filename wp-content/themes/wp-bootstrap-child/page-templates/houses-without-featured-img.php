@@ -1,4 +1,4 @@
-<?php /* Template Name: contact-page */ ?>
+<?php /* Template Name: houses-without-featured-img */ ?>
 
 <?php
 
@@ -11,11 +11,9 @@ get_header(); ?>
 
 		<main id="main" class="site-main" role="main">
 
-			<?php
-			while ( have_posts() ) : the_post();
-			?>
-
-			<!-- Imports the page content -->
+            <?php while ( have_posts() ) : the_post(); ?>
+            
+            <!-- Imports the page content -->
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<div class="post-thumbnail">
 					<!-- Dont show the posts featured image on the front page  -->
@@ -51,9 +49,7 @@ get_header(); ?>
 				</footer><!-- .entry-footer -->
 			</article><!-- #post-## -->
 				
-			<?php
-			endwhile; // End of the loop.
-			?>
+            <?php endwhile; // End of the loop.?>
 
 		</main><!-- #main -->
 	</section><!-- #primary -->

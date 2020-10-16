@@ -20,13 +20,17 @@
 	<div class="entry-summary">
 		<div class="search-item-image">
 			<!-- If there is a post thumnail then show it otherwise say that no image was found -->
-			<?php 				
-				if ( has_post_thumbnail() ) {
-					the_post_thumbnail( 'thumbnail' );
+			<!-- Url allows user to click on the image to get to the page -->
+			<?php if ( has_post_thumbnail() ) { ?>
+				<a href="<?php echo esc_attr( esc_url( get_page_link() ) ) ?>">
+					<?php the_post_thumbnail( 'thumbnail' ); ?>
+				</a>
+			<?php 
 				} else {
 					echo nl2br ("No (featured) image \n found?");
 				}
 			?>
+			
 		</div>
 
 			<div class="search-item-text">

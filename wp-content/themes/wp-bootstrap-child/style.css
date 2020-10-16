@@ -1140,10 +1140,6 @@ html body {
 .home-image {
   width: 80%
 }
-/* Font class which is on top of the image */
-/* .has-large-font-size {
-  font-weight: 700; 
-} */
  
 /* Logo Custom spacing */
 /* Changes the kerning of the "Canberra" text   */
@@ -1151,6 +1147,10 @@ html body {
   letter-spacing: 0.22rem;
   
 }
+
+/* --------------------------------------- */
+/* Search bar in navigation customisations */
+/* --------------------------------------- */
 
 /* Ivory Search CSS */
 /* Customising the Menu search function */
@@ -1162,6 +1162,11 @@ html body {
   .search-close {
     top:12px;
   }
+
+
+/* --------------------------------------------- */
+/* WP forms custom styling (All on contact page) */
+/* --------------------------------------------- */
 
   /* Custom Contact Form */
 #wpforms-159-field_2-container {
@@ -1180,9 +1185,12 @@ html body {
   text-align: center;
   cursor: pointer;
   box-shadow: none;
-
 }
 
+
+/* --------------------------- */
+/* CSS for the main home page  */
+/* --------------------------- */
 
 /* The darken sets a very dark background colour behind the image*/
 /* This happens on screens greater than 1568px */
@@ -1190,7 +1198,6 @@ html body {
   background: rgba(0, 0, 0, 0.5);
   padding: 125px;
 }
-
 
   /* What happens on screens less than 870px and greater than 600px */
   @media screen and (min-width: 870px) {
@@ -1234,6 +1241,10 @@ html body {
     }
   }
 
+/* ----------------------- */
+/* Single Column CSS Class */
+/* ----------------------- */
+
 /* Custom paragraph spacing for single column paragraphs  */
 .wrapper-single-column {
   margin: 1.5em 13em;
@@ -1248,10 +1259,16 @@ html body {
 
   }
 
+/* ------------------------------- */
+/* CSS for each search page result */
+/* ------------------------------- */
+
+/* Floats the image left */
 .search-item-image {
   float: left;
 }
 
+/* Makes the text inline, this displays it next to the image */
 .search-item-text {
   display: inline;
 }
@@ -1260,6 +1277,7 @@ html body {
     margin-left: 12.5em
   }
 
+/* Adjusting the margins so the content doesnt overlap */
 .entry-footer {
   margin-left: 12.5em;
 }

@@ -17,9 +17,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="profile" href="http://gmpg.org/xfn/11">
 
-    <!-- Css Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;400;600;700&display=swap" rel="stylesheet">
-
 <?php wp_head(); ?>
 </head>
 

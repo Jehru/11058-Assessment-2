@@ -11,6 +11,14 @@ License URI: LICENSE
 Text Domain: wp-bootstrap-starter-child
 Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, right-sidebar, custom-background, e-commerce, theme-options, sticky-post, full-width-template
 */
+
+/* Custom Default font, Work sans  */
+/* @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap'); */
+
+/* Without 500 weight as it makes the menu bigger*/
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -1282,3 +1290,10 @@ html body {
   margin-left: 12.5em;
 }
 
+/* ------------------ */
+/* Map on Houses page */
+/* ------------------ */
+
+#mapp0-layout {
+  width: 100% !important;
+}

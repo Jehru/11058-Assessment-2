@@ -1258,14 +1258,33 @@ html body {
   margin: 1.5em 13em;
 }
 
-  /* When screen is less than 991px then the side paddding is less */
-  @media screen and (max-width: 991px) {
-
+  /* When screen is greater than 600px make the margin wider so the content is easier to read  */
+  @media screen and (min-width: 600px) {
     .wrapper-single-column {
       margin: 1.5em 5em;
     }
-
   }
+
+    /* When screen is greater than 1200px make the margin wider so the content is easier to read   */
+    @media screen and (min-width: 1200px) {
+      .wrapper-single-column {
+        margin: 1.5em 12em;
+      }
+    }
+
+  /* When the screen is less than 600px make the margin the same as other text blocks */
+  @media screen and (max-width: 600px) {
+    .wrapper-single-column {
+      margin: 0 8%;
+    }
+  }
+
+/* When the screen is less than 300px, make the grey box text easier to read */
+@media screen and (max-width: 300px){
+  p.has-background {
+    padding: 0px !important;
+  }
+}
 
 /* ------------------------------- */
 /* CSS for each search page result */

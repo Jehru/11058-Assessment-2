@@ -27,8 +27,9 @@
 				</a>
 			<?php 
 				} else {
-					echo nl2br ("No (featured) image \n found?");
-				}
+					// Otherwise gets a (no image found) image with the thumnail size
+					echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) 
+					. '/images/no-image-found.png" width="150" height="150" />';				}
 			?>
 			
 		</div>

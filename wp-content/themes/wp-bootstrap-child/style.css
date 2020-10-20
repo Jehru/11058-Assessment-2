@@ -50,283 +50,296 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
 body {
     margin: 0;
     -webkit-font-smoothing: auto;
-  }
-  
-  article,
-  aside,
-  details,
-  figcaption,
-  figure,
-  footer,
-  header,
-  main,
-  menu,
-  nav,
-  section,
-  summary {
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
     display: block;
-  }
-  
-  audio,
-  canvas,
-  progress,
-  video {
+}
+
+audio,
+canvas,
+progress,
+video {
     display: inline-block;
     vertical-align: baseline;
-  }
-  
-  audio:not([controls]) {
+}
+
+audio:not([controls]) {
     display: none;
     height: 0;
-  }
-  
-  [hidden],
-  template {
+}
+
+[hidden],
+template {
     display: none;
-  }
-  
-  a {
+}
+
+a {
     background-color: transparent;
-  }
-  
-  a:active,
-  a:hover {
+}
+
+a:active,
+a:hover {
     outline: 0;
-  }
-  
-  dfn {
+}
+
+dfn {
     font-style: italic;
-  }
-  
-  mark {
+}
+
+mark {
     background: #ff0;
     color: #000;
-  }
-  
-  small {
+}
+
+small {
     font-size: 80%;
-  }
-  
-  sub,
-  sup {
+}
+
+sub,
+sup {
     font-size: 75%;
     line-height: 0;
     position: relative;
     vertical-align: baseline;
-  }
-  
-  sup {
+}
+
+sup {
     top: -0.5em;
-  }
-  
-  sub {
+}
+
+sub {
     bottom: -0.25em;
-  }
-  
-  img {
+}
+
+img {
     border: 0;
-  }
-  
-  svg:not(:root) {
+}
+
+svg:not(:root) {
     overflow: hidden;
-  }
-  
-  figure {
+}
+
+figure {
     margin: 1em 2.5rem;
-  }
-  
-  hr {
+}
+
+hr {
     box-sizing: content-box;
     height: 0;
-  }
-  
-  button {
+}
+
+button {
     overflow: visible;
-  }
-  
-  button,
-  select {
+}
+
+button,
+select {
     text-transform: none;
-  }
-  
-  button,
-  html input[type="button"],
-  input[type="reset"],
-  input[type="submit"] {
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
     -webkit-appearance: button;
     cursor: pointer;
-  }
-  
-  button[disabled],
-  html input[disabled] {
+}
+
+button[disabled],
+html input[disabled] {
     cursor: default;
-  }
-  
-  button::-moz-focus-inner,
-  input::-moz-focus-inner {
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
     border: 0;
     padding: 0;
-  }
-  
-  input {
+}
+
+input {
     line-height: normal;
-  }
-  
-  input[type="checkbox"],
-  input[type="radio"] {
+}
+
+input[type="checkbox"],
+input[type="radio"] {
     box-sizing: border-box;
     padding: 0;
-  }
-  
-  input[type="number"]::-webkit-inner-spin-button,
-  input[type="number"]::-webkit-outer-spin-button {
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
     height: auto;
-  }
-  
-  input[type="search"]::-webkit-search-cancel-button,
-  input[type="search"]::-webkit-search-decoration {
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
     -webkit-appearance: none;
-  }
-  
-  fieldset {
+}
+
+fieldset {
     border: 1px solid #c0c0c0;
     margin: 0 2px;
     padding: 0.35em 0.625em 0.75em;
-  }
-  
-  legend {
+}
+
+legend {
     border: 0;
     padding: 0;
-  }
-  
-  textarea {
+}
+
+textarea {
     overflow: auto;
-  }
-  
-  optgroup {
+}
+
+optgroup {
     font-weight: bold;
-  }
-  
-  table {
+}
+
+table {
     border-collapse: collapse;
     border-spacing: 0;
-  }
-  
-  td,
-  th {
+}
+
+td,
+th {
     padding: 0;
-  }
-  
-  /*--------------------------------------------------------------
+}
+
+/*--------------------------------------------------------------
   # Typography
   --------------------------------------------------------------*/
-  h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     clear: both;
     color: #24292e;
     font-weight: 600;
     margin-top: 24px;
     margin-bottom: 15px;
-  }
-  h1 {
+}
+
+h1 {
     font-size: 32px;
     padding-bottom: 10px;
-  }
-  h2 {
+}
+
+h2 {
     font-size: 24px;
     padding-bottom: 0.3em;
     line-height: 1.25;
-  }
-  h3 {
+}
+
+h3 {
     font-size: 18px;
     line-height: 25px;
-  }
-  h4 {
+}
+
+h4 {
     font-size: 16px;
     line-height: 20px;
-  }
-  h5 {
+}
+
+h5 {
     font-size: 14px;
     line-height: 17.5px;
-  }
-  
-  p {
+}
+
+p {
     margin-bottom: 1.5em;
-  }
-  h1.entry-title {
+}
+
+h1.entry-title {
     font-size: 1.31rem;
     border-bottom: 1px solid #eaecef;
     /* Customised the text transform property */
     text-transform: uppercase;
-  }
+}
 
-  /* Search titles */
-  /* Customised the top margin so there was more space between each item */
-  h2.entry-title {
+/* Search titles */
+/* Customised the top margin so there was more space between each item */
+h2.entry-title {
     border-bottom: 1px solid #eaecef;
     margin-top: 3em;
-  }
-  h3.widget-title {
+}
+
+h3.widget-title {
     font-size: 1.2rem;
-  }
-  
-  /*--------------------------------------------------------------
+}
+
+/*--------------------------------------------------------------
   # Elements
   --------------------------------------------------------------*/
-  body {
+body {
     background: #fff;
     /* Fallback for when there is no custom background color defined. */
-  }
-  
-  img {
+}
+
+img {
     height: auto;
     /* Make sure images are scaled correctly. */
     max-width: 100%;
     /* Adhere to container width. */
-  }
-  
-  figure {
+}
+
+figure {
     margin: 1em 0;
     /* Extra wide images within figure tags don't overflow the content area. */
-  }
-  
-  table {
+}
+
+table {
     margin: 0 0 1.5em;
     width: 100%;
-  }
-  
-  /*--------------------------------------------------------------
+}
+
+/*--------------------------------------------------------------
   # Forms
   --------------------------------------------------------------*/
-  /*--------------------------------------------------------------
+/*--------------------------------------------------------------
   # Navigation
   --------------------------------------------------------------*/
-  
-  /* Changed the background colour */
-  /* Customised the colour and removed the box shadow */
-  header#masthead {
+
+/* Changed the background colour */
+/* Customised the colour and removed the box shadow */
+header#masthead {
     margin-bottom: 0;
-    background-color: #fff ;
+    background-color: #fff;
     /* box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1); */
     padding: .74rem 1rem;
-  }
-  
-  /* Customised navbar brand */
-  /* Added padding so that there wasnt any space in the logo that the user couldnt click */
-  .navbar-brand > a {
+}
+
+/* Customised navbar brand */
+/* Added padding so that there wasnt any space in the logo that the user couldnt click */
+.navbar-brand > a {
     color: rgba(0, 0, 0, 0.9);
     font-size: 1.1rem;
     outline: medium none;
     text-decoration: none;
     color: #303030;
     font-weight: 700;
-    padding:5px;
-  }
-  
-  .navbar-brand > a:visited, .navbar-brand > a:hover {
+    padding: 5px;
+}
+
+.navbar-brand > a:visited,
+.navbar-brand > a:hover {
     text-decoration: none;
-  }
-  
-  #page-sub-header {
+}
+
+#page-sub-header {
     position: relative;
     /* Changing where the text is located  */
     /* padding-top: 20rem; */
@@ -334,64 +347,68 @@ body {
     text-align: center;
     font-size: 1.25rem;
     background-size: cover !important;
-  }
+}
 
-  body:not(.theme-preset-active) #page-sub-header h1 {
+body:not(.theme-preset-active) #page-sub-header h1 {
     line-height: 1.6;
     font-size: 4rem;
     color: #fff;
     margin: 0 0 1rem;
     border: 0;
     padding: 0;
-  }
-  
-  #page-sub-header p {
+}
+
+#page-sub-header p {
     margin-bottom: 0;
     line-height: 1.4;
     font-size: 1.25rem;
     font-weight: 300;
-  }
-  body:not(.theme-preset-active) #page-sub-header p {
-  color: white;
-  /* Customised font weight */
-  font-weight: 500;
-  }
-  a.page-scroller {
+}
+
+body:not(.theme-preset-active) #page-sub-header p {
+    color: white;
+    /* Customised font weight */
+    font-weight: 500;
+}
+
+a.page-scroller {
     color: #333;
     font-size: 2.6rem;
     display: inline-block;
     margin-top: 2rem;
-  }
-  
-  @media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 768px) {
     body:not(.theme-preset-active) #page-sub-header h1 {
-      font-size: 3.750rem;
+        font-size: 3.750rem;
     }
+
     /* Added a bottom padding so that the header image has height */
     body:not(.theme-preset-active) #page-sub-header {
-      font-size: 1.25rem;
+        font-size: 1.25rem;
     }
-  }
-  @media screen and (min-width: 992px) {
-    #page-sub-header p {
-      max-width: 43rem;
-      margin: 0 auto;
-    }
-  }
+}
 
-  /*--------------------------------------------------------------
+@media screen and (min-width: 992px) {
+    #page-sub-header p {
+        max-width: 43rem;
+        margin: 0 auto;
+    }
+}
+
+/*--------------------------------------------------------------
   ## Links
   --------------------------------------------------------------*/
-  /*--------------------------------------------------------------
+/*--------------------------------------------------------------
   ## Menus
   --------------------------------------------------------------*/
-  #masthead nav {
+#masthead nav {
     padding-left: 0;
     padding-right: 0;
-  }
-  
-  /* Header Links */
-  body:not(.theme-preset-active) #masthead .navbar-nav > li > a {
+}
+
+/* Header Links */
+body:not(.theme-preset-active) #masthead .navbar-nav > li > a {
     color: #303030;
     padding: 0.5rem;
     font-weight: 500;
@@ -400,249 +417,253 @@ body {
 
     /* Custom Position, needed for the underline animation to work  */
     position: relative;
-  }
-  
-  /* On-Hover Effect */
-  /* Changed what happens when the user hovers over the links, Customised the effect and the colour */
+}
 
-  /* Original effect */
-  /* body:not(.theme-preset-active) #masthead .navbar-nav > li > a:hover,
+/* On-Hover Effect */
+/* Changed what happens when the user hovers over the links, Customised the effect and the colour */
+
+/* Original effect */
+/* body:not(.theme-preset-active) #masthead .navbar-nav > li > a:hover,
   body:not(.theme-preset-active) #masthead .navbar-nav > li.current_page_item > a {
     color: #303030;
     font-weight: 600;
     background: #f9f9f9;
   } */
-  
 
-  /* New Animated Underline Effect */
-  /* Hidden underline that is 2px long and is black */
-  /* Needed to be -2px at the bottom or the current page would conflict with the animation */
-  body:not(.theme-preset-active) #masthead .navbar-nav > li > a:before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -2px;
-  left: 0;
-  background-color: #303030;
-  visibility: hidden;
-  transition: all 0.3s ease-in-out;
-  }
 
-  /* Makes the underline visible */
-  body:not(.theme-preset-active) #masthead .navbar-nav > li > a:hover:before {
+/* New Animated Underline Effect */
+/* Hidden underline that is 2px long and is black */
+/* Needed to be -2px at the bottom or the current page would conflict with the animation */
+body:not(.theme-preset-active) #masthead .navbar-nav > li > a:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #303030;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Makes the underline visible */
+body:not(.theme-preset-active) #masthead .navbar-nav > li > a:hover:before {
     visibility: visible;
     width: 100%;
-  }
+}
 
-  /* Current page  */
-  body:not(.theme-preset-active) #masthead .navbar-nav > li.current_page_item > a {
+/* Current page  */
+body:not(.theme-preset-active) #masthead .navbar-nav > li.current_page_item > a {
     color: #303030;
     border-bottom: 2px solid;
-  }
+}
 
-  /* End CSS Underline Effect*/
+/* End CSS Underline Effect*/
 
-  .navbar-brand {
+.navbar-brand {
     /* Changed the posititon so that the "Canberra" text would appear below the "Mid century" text  */
     position: relative;
     height: auto;
-  }
-  
-  .navbar-toggle .icon-bar {
+}
+
+.navbar-toggle .icon-bar {
     background: #000 none repeat scroll 0 0;
-  }
-  
-  .dropdown-menu .dropdown-toggle::after {
+}
+
+.dropdown-menu .dropdown-toggle::after {
     border-bottom: 0.3em solid transparent;
     border-left: 0.3em solid;
     border-top: 0.3em solid transparent;
-  }
-  
-  .dropdown.menu-item-has-children .dropdown.menu-item-has-children {
-      position: relative;
-  }
-  
-  .dropdown.menu-item-has-children .dropdown.menu-item-has-children>.dropdown-menu {
-      top: 0;
-      left: 100%;
-      margin-top: -6px;
-      margin-left: -1px;
-      -webkit-border-radius: 0 6px 6px 6px;
-      -moz-border-radius: 0 6px 6px;
-      border-radius: 0 6px 6px 6px;
-  }
-  .dropdown.menu-item-has-children .dropdown.menu-item-has-children:hover>.dropdown-menu {
-      display: block;
-  }
-  
-  .dropdown.menu-item-has-children .dropdown.menu-item-has-children>a:after {
-      display: block;
-      content: " ";
-      float: right;
-      width: 0;
-      height: 0;
-      border-color: transparent;
-      border-style: solid;
-      border-width: 5px 0 5px 5px;
-      border-left-color: #ccc;
-      margin-top: 5px;
-      margin-right: -10px;
-  }
-  
-  .dropdown.menu-item-has-children .dropdown.menu-item-has-children:hover>a:after {
-      border-left-color: #fff;
-  }
-  
-  .dropdown.menu-item-has-children .dropdown.menu-item-has-children.pull-left {
-      float: none;
-  }
-  
-  .dropdown.menu-item-has-children .dropdown.menu-item-has-children.pull-left>.dropdown-menu {
-      left: -100%;
-      margin-left: 10px;
-      -webkit-border-radius: 6px 0 6px 6px;
-      -moz-border-radius: 6px 0 6px 6px;
-      border-radius: 6px 0 6px 6px;
-  }
-  
-  /* Small menu. */
-  .menu-toggle,
-  .main-navigation.toggled ul {
+}
+
+.dropdown.menu-item-has-children .dropdown.menu-item-has-children {
+    position: relative;
+}
+
+.dropdown.menu-item-has-children .dropdown.menu-item-has-children > .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px;
+}
+
+.dropdown.menu-item-has-children .dropdown.menu-item-has-children:hover > .dropdown-menu {
     display: block;
-  }
-  
-  .dropdown-item {
+}
+
+.dropdown.menu-item-has-children .dropdown.menu-item-has-children > a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+
+.dropdown.menu-item-has-children .dropdown.menu-item-has-children:hover > a:after {
+    border-left-color: #fff;
+}
+
+.dropdown.menu-item-has-children .dropdown.menu-item-has-children.pull-left {
+    float: none;
+}
+
+.dropdown.menu-item-has-children .dropdown.menu-item-has-children.pull-left > .dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+    display: block;
+}
+
+.dropdown-item {
     line-height: 1.2;
     padding-bottom: 0.313rem;
     padding-top: 0.313rem;
-  }
-  
-  .dropdown-menu {
+}
+
+.dropdown-menu {
     min-width: 12.500rem;
-  }
-  
-  .dropdown .open .dropdown-menu {
+}
+
+.dropdown .open .dropdown-menu {
     display: block;
     left: 12.250em;
     top: 0;
-  }
-  
-  .dropdown-menu .dropdown-item {
+}
+
+.dropdown-menu .dropdown-item {
     white-space: normal;
     background: transparent;
     line-height: 1.6;
-  }
-  .dropdown-menu .dropdown-item:hover {
+}
+
+.dropdown-menu .dropdown-item:hover {
     background: transparent;
-  }
-  
-  @media screen and (min-width: 37.5em) {
+}
+
+@media screen and (min-width: 37.5em) {
     .menu-toggle {
-      display: none;
+        display: none;
     }
-  }
-  @media screen and (min-width: 769px) {
+}
+
+@media screen and (min-width: 769px) {
     .dropdown-menu li > .dropdown-menu {
-      right: -9.875rem;
-      top: 1.375rem;
+        right: -9.875rem;
+        top: 1.375rem;
     }
-  }
+}
 
-  /* 991px */
-  @media screen and (max-width: 1200px) {
+/* 991px */
+@media screen and (max-width: 1200px) {
     .navbar-nav .dropdown-menu {
-      border: medium none;
-      margin-left: 1.250rem;
-      padding: 0;
+        border: medium none;
+        margin-left: 1.250rem;
+        padding: 0;
     }
-  
-    .dropdown-menu li a {
-      padding: 0;
-    }
-  
-    #masthead .navbar-nav > li > a {
-      padding-bottom: 0.625rem;
-      padding-top: 0.313rem;
 
-      /* Removes the border on devices with max width 991px */
-      transition: unset;
-      border-bottom: 0 !important;
+    .dropdown-menu li a {
+        padding: 0;
+    }
+
+    #masthead .navbar-nav > li > a {
+        padding-bottom: 0.625rem;
+        padding-top: 0.313rem;
+
+        /* Removes the border on devices with max width 991px */
+        transition: unset;
+        border-bottom: 0 !important;
     }
 
     /* Hides the underline effect */
     body:not(.theme-preset-active) #masthead .navbar-nav > li > a:hover:before {
-      visibility: hidden;
+        visibility: hidden;
     }
 
     /* Gives the default underline effect */
     /* However on a mobile device this effect should probably not be noticeable */
     body:not(.theme-preset-active) #masthead .navbar-nav > li > a:hover {
-    text-decoration: underline;
+        text-decoration: underline;
     }
 
     .navbar-light .navbar-toggler {
-      border: medium none;
-      outline: none;
+        border: medium none;
+        outline: none;
     }
-  }
-  
-  .site-main .comment-navigation,
-  .site-main .posts-navigation,
-  .site-main .post-navigation {
+}
+
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
     margin: 0 0 1.5em;
     overflow: hidden;
-  }
-  
-  .comment-navigation .nav-previous,
-  .posts-navigation .nav-previous,
-  .post-navigation .nav-previous {
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
     float: left;
     width: 50%;
-  }
-  
-  .comment-navigation .nav-next,
-  .posts-navigation .nav-next,
-  .post-navigation .nav-next {
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
     float: right;
     text-align: right;
     width: 50%;
-  }
-  .comment-content.card-block {
+}
+
+.comment-content.card-block {
     padding: 20px;
-  }
-  
-  .navigation.post-navigation {
+}
+
+.navigation.post-navigation {
     padding-top: 1.875rem;
-  }
-  
-  .post-navigation .nav-previous a,
-  .post-navigation .nav-next a {
+}
+
+.post-navigation .nav-previous a,
+.post-navigation .nav-next a {
     border: 1px solid #ddd;
     border-radius: 0.938rem;
     display: inline-block;
     padding: 0.313rem 0.875rem;
     text-decoration: none;
-  }
-  
-  .post-navigation .nav-next a::after {
+}
+
+.post-navigation .nav-next a::after {
     content: " \2192";
-  }
-  
-  .post-navigation .nav-previous a::before {
+}
+
+.post-navigation .nav-previous a::before {
     content: "\2190 ";
-  }
-  
-  .post-navigation .nav-previous a:hover,
-  .post-navigation .nav-next a:hover {
+}
+
+.post-navigation .nav-previous a:hover,
+.post-navigation .nav-next a:hover {
     background: #eee none repeat scroll 0 0;
-  }
-  
-  /*--------------------------------------------------------------
+}
+
+/*--------------------------------------------------------------
   # Accessibility
   --------------------------------------------------------------*/
-  /* Text meant only for screen readers. */
-  .screen-reader-text {
+/* Text meant only for screen readers. */
+.screen-reader-text {
     clip: rect(1px, 1px, 1px, 1px);
     position: absolute !important;
     height: 1px;
@@ -650,8 +671,9 @@ body {
     overflow: hidden;
     word-wrap: normal !important;
     /* Many screen reader and browser combinations announce broken words as they would appear visually. */
-  }
-  .screen-reader-text:focus {
+}
+
+.screen-reader-text:focus {
     background-color: #f1f1f1;
     border-radius: 3px;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
@@ -670,144 +692,147 @@ body {
     width: auto;
     z-index: 100000;
     /* Above WP toolbar. */
-  }
-  
-  /* Do not show the outline on the skip link target. */
-  #content[tabindex="-1"]:focus {
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
     outline: 0;
-  }
-  
-  /*--------------------------------------------------------------
+}
+
+/*--------------------------------------------------------------
   # Alignments
   --------------------------------------------------------------*/
-  .alignleft {
+.alignleft {
     display: inline;
     float: left;
     margin-right: 1.5em;
-  }
-  
-  .alignright {
+}
+
+.alignright {
     display: inline;
     float: right;
     margin-left: 1.5em;
-  }
-  
-  .aligncenter {
+}
+
+.aligncenter {
     clear: both;
     display: block;
     margin-left: auto;
     margin-right: auto;
-  }
-  
-  a img.alignright {
+}
+
+a img.alignright {
     float: right;
     margin: 0.313rem 0 1.25rem 1.25rem;
-  }
-  
-  a img.alignnone {
+}
+
+a img.alignnone {
     margin: 0.313rem 1.25rem 1.25rem 0;
-  }
-  
-  a img.alignleft {
+}
+
+a img.alignleft {
     float: left;
     margin: 0.313rem 1.25rem 1.25rem 0;
-  }
-  
-  a img.aligncenter {
+}
+
+a img.aligncenter {
     display: block;
     margin-left: auto;
     margin-right: auto;
-  }
-  
-  .wp-caption.alignnone {
+}
+
+.wp-caption.alignnone {
     margin: 0.313rem 1.25rem 1.25rem 0;
-  }
-  
-  .wp-caption.alignleft {
+}
+
+.wp-caption.alignleft {
     margin: 0.313rem 1.25rem 1.25rem 0;
-  }
-  
-  .wp-caption.alignright {
+}
+
+.wp-caption.alignright {
     margin: 0.313rem 0 1.25rem 1.25rem;
-  }
-  
-  /*--------------------------------------------------------------
+}
+
+/*--------------------------------------------------------------
   # Clearings
   --------------------------------------------------------------*/
-  .clear:before,
-  .clear:after,
-  .entry-content:before,
-  .entry-content:after,
-  .comment-content:before,
-  .comment-content:after,
-  .site-header:before,
-  .site-header:after,
-  .site-content:before,
-  .site-content:after,
-  .site-footer:before,
-  .site-footer:after {
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
     content: "";
     display: table;
     table-layout: fixed;
-  }
-  
-  .clear:after,
-  .entry-content:after,
-  .comment-content:after,
-  .site-header:after,
-  .site-content:after,
-  .site-footer:after {
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
     clear: both;
-  }
-  
-  /*--------------------------------------------------------------
+}
+
+/*--------------------------------------------------------------
   # Widgets
   --------------------------------------------------------------*/
-  .widget {
+.widget {
     margin: 0 0 1.5em;
     font-size: 0.875rem;
     /* Make sure select elements fit in widgets. */
-  }
-  .widget select {
+}
+
+.widget select {
     max-width: 100%;
-  }
-  
-  .widget_search .search-form input[type="submit"] {
+}
+
+.widget_search .search-form input[type="submit"] {
     display: none;
-  }
-  
-  .nav > li > a:focus,
-  .nav > li > a:hover {
+}
+
+.nav > li > a:focus,
+.nav > li > a:hover {
     background-color: #eee;
     text-decoration: none;
-  }
-  .half-rule {
+}
+
+.half-rule {
     width: 6rem;
     margin: 2.5rem 0;
-  }
-  .widget_categories .nav-link {
+}
+
+.widget_categories .nav-link {
     display: inline-block;
-  }
-  
-  /*--------------------------------------------------------------
+}
+
+/*--------------------------------------------------------------
   # Content
   --------------------------------------------------------------*/
-  /*--------------------------------------------------------------
+/*--------------------------------------------------------------
   ## Posts and pages
   --------------------------------------------------------------*/
-  /* Customised the topp padding by reducing it by one so the home page content sits better  */
-  #content.site-content {
+/* Customised the topp padding by reducing it by one so the home page content sits better  */
+#content.site-content {
     padding-bottom: 3.75rem;
     padding-top: 3.125rem;
-  }
+}
 
-  /* Home page no top padding */
-  #content.site-content-home {
+/* Home page no top padding */
+#content.site-content-home {
     padding-bottom: 3.75rem;
     /* padding-top: 3.125rem; */
-  }
-  
-  .sticky .entry-title::before {
+}
+
+.sticky .entry-title::before {
     content: '\f08d';
     font-family: "Font Awesome\ 5 Free";
     font-size: 1.563rem;
@@ -815,345 +840,367 @@ body {
     position: absolute;
     top: 0.375rem;
     font-weight: 900;
-  }
-  
-  .sticky .entry-title {
+}
+
+.sticky .entry-title {
     position: relative;
-  }
-  
-  .single .byline,
-  .group-blog .byline {
+}
+
+.single .byline,
+.group-blog .byline {
     display: inline;
-  }
-  
-  .page-content,
-  .entry-content,
-  .entry-summary {
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
     margin: 1.5em 0 0;
-  }
-  
-  .page-links {
+}
+
+.page-links {
     clear: both;
     margin: 0 0 1.5em;
-  }
-  
-  .page-template-blank-page .entry-content,
-  .blank-page-with-container .entry-content {
+}
+
+.page-template-blank-page .entry-content,
+.blank-page-with-container .entry-content {
     margin-top: 0;
-  }
-  
-   /* Customised the bottom CSS for the search items */ 
-  .post.hentry {
+}
+
+/* Customised the bottom CSS for the search items */
+.post.hentry {
     margin-bottom: 8rem;
-  }
-  
-  .posted-on, .byline, .comments-link {
+}
+
+.posted-on,
+.byline,
+.comments-link {
     color: #9a9a9a;
-  }
-  
-  .entry-title > a {
+}
+
+.entry-title > a {
     color: inherit;
-  }
-  
-  /*--------------------------------------------------------------
+}
+
+/*--------------------------------------------------------------
   ## Comments
   --------------------------------------------------------------*/
-  .comment-content a {
+.comment-content a {
     word-wrap: break-word;
-  }
-  
-  .bypostauthor {
+}
+
+.bypostauthor {
     display: block;
-  }
-  
-  .comment-body .pull-left {
+}
+
+.comment-body .pull-left {
     padding-right: 0.625rem;
-  }
-  
-  .comment-list .comment {
+}
+
+.comment-list .comment {
     display: block;
-  }
-  
-  .comment-list {
+}
+
+.comment-list {
     padding-left: 0;
-  }
-  
-  .comments-title {
+}
+
+.comments-title {
     font-size: 1.125rem;
-  }
-  
-  .comment-list .pingback {
+}
+
+.comment-list .pingback {
     border-top: 1px solid rgba(0, 0, 0, 0.125);
     padding: 0.563rem 0;
-  }
-  
-  .comment-list .pingback:first-child {
+}
+
+.comment-list .pingback:first-child {
     border: medium none;
-  }
-  
-  /*--------------------------------------------------------------
+}
+
+/*--------------------------------------------------------------
   # Infinite scroll
   --------------------------------------------------------------*/
-  /* Globally hidden elements when Infinite Scroll is supported and in use. */
-  .infinite-scroll .posts-navigation,
-  .infinite-scroll.neverending .site-footer {
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
     /* Theme Footer (when set to scrolling) */
     display: none;
-  }
-  
-  /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
-  .infinity-end.neverending .site-footer {
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
     display: block;
-  }
-  
-  /*--------------------------------------------------------------
+}
+
+/*--------------------------------------------------------------
   # Media
   --------------------------------------------------------------*/
-  .page-content .wp-smiley,
-  .entry-content .wp-smiley,
-  .comment-content .wp-smiley {
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
     border: none;
     margin-bottom: 0;
     margin-top: 0;
     padding: 0;
-  }
-  
-  /* Make sure embeds and iframes fit their containers. */
-  embed,
-  iframe,
-  object {
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
     max-width: 100%;
-  }
-  
-  /*--------------------------------------------------------------
+}
+
+/*--------------------------------------------------------------
   ## Captions
   --------------------------------------------------------------*/
-  .wp-caption {
+.wp-caption {
     background: #f1f1f1 none repeat scroll 0 0;
     border: 1px solid #f0f0f0;
     max-width: 96%;
     padding: 0.313rem 0.313rem 0;
     text-align: center;
-  }
-  .wp-caption img[class*="wp-image-"] {
+}
+
+.wp-caption img[class*="wp-image-"] {
     border: 0 none;
     height: auto;
     margin: 0;
     max-width: 100%;
     padding: 0;
     width: auto;
-  }
-  .wp-caption .wp-caption-text {
+}
+
+.wp-caption .wp-caption-text {
     font-size: 0.688rem;
     line-height: 1.063rem;
     margin: 0;
     padding: 0.625rem;
-  }
-  
-  .wp-caption-text {
+}
+
+.wp-caption-text {
     text-align: center;
-  }
-  
-  /*--------------------------------------------------------------
+}
+
+/*--------------------------------------------------------------
   ## Galleries
   --------------------------------------------------------------*/
-  .gallery {
+.gallery {
     margin-bottom: 1.5em;
-  }
-  
-  .gallery-item {
+}
+
+.gallery-item {
     display: inline-block;
     text-align: center;
     vertical-align: top;
     width: 100%;
-  }
-  .gallery-item .gallery-columns-2 {
+}
+
+.gallery-item .gallery-columns-2 {
     max-width: 50%;
-  }
-  .gallery-item .gallery-columns-3 {
+}
+
+.gallery-item .gallery-columns-3 {
     max-width: 33.33333%;
-  }
-  .gallery-item .gallery-columns-4 {
+}
+
+.gallery-item .gallery-columns-4 {
     max-width: 25%;
-  }
-  .gallery-item .gallery-columns-5 {
+}
+
+.gallery-item .gallery-columns-5 {
     max-width: 20%;
-  }
-  .gallery-item .gallery-columns-6 {
+}
+
+.gallery-item .gallery-columns-6 {
     max-width: 16.66667%;
-  }
-  .gallery-item .gallery-columns-7 {
+}
+
+.gallery-item .gallery-columns-7 {
     max-width: 14.28571%;
-  }
-  .gallery-item .gallery-columns-8 {
+}
+
+.gallery-item .gallery-columns-8 {
     max-width: 12.5%;
-  }
-  .gallery-item .gallery-columns-9 {
+}
+
+.gallery-item .gallery-columns-9 {
     max-width: 11.11111%;
-  }
-  
-  .gallery-caption {
+}
+
+.gallery-caption {
     display: block;
-  }
-  
-  /*--------------------------------------------------------------
+}
+
+/*--------------------------------------------------------------
   # Plugin Compatibility
   --------------------------------------------------------------*/
-  /*--------------------------------------------------------------
+/*--------------------------------------------------------------
   ## Woocommerce
   --------------------------------------------------------------*/
-  .woocommerce-cart-form .shop_table .coupon .input-text {
+.woocommerce-cart-form .shop_table .coupon .input-text {
     width: 8.313rem !important;
-  }
-  
-  .variations_form .variations .value > select {
+}
+
+.variations_form .variations .value > select {
     margin-bottom: 0.625rem;
-  }
-  
-  .woocommerce-MyAccount-content .col-1,
-  .woocommerce-MyAccount-content .col-2 {
+}
+
+.woocommerce-MyAccount-content .col-1,
+.woocommerce-MyAccount-content .col-2 {
     max-width: 100%;
-  }
-  
-  /*--------------------------------------------------------------
+}
+
+/*--------------------------------------------------------------
   ## Elementor
   --------------------------------------------------------------*/
-  .elementor-page article .entry-footer {
+.elementor-page article .entry-footer {
     display: none;
-  }
-  
-  .elementor-page.page-template-fullwidth #content.site-content {
+}
+
+.elementor-page.page-template-fullwidth #content.site-content {
     padding-bottom: 0;
     padding-top: 0;
-  }
-  
-  .elementor-page .entry-content {
+}
+
+.elementor-page .entry-content {
     margin-top: 0;
-  }
-  
-  /*--------------------------------------------------------------
+}
+
+/*--------------------------------------------------------------
   ## Visual Composer
   --------------------------------------------------------------*/
-  .vc_desktop article .entry-footer {
+.vc_desktop article .entry-footer {
     display: none;
-  }
-  
-  .vc_desktop #content.site-content {
+}
+
+.vc_desktop #content.site-content {
     padding-bottom: 0;
     padding-top: 0;
-  }
-  
-  .vc_desktop .entry-content {
+}
+
+.vc_desktop .entry-content {
     margin-top: 0;
-  }
-  
-  /*--------------------------------------------------------------
+}
+
+/*--------------------------------------------------------------
   # Footer
   --------------------------------------------------------------*/
-  footer#colophon {
+footer#colophon {
     font-size: 85%;
-  }
-  body:not(.theme-preset-active) footer#colophon {
+}
+
+body:not(.theme-preset-active) footer#colophon {
     color: #99979c;
     background-color: #f7f7f7;
-  }
-  .navbar-dark .site-info {
+}
+
+.navbar-dark .site-info {
     color: #fff;
-  }
-  .copyright {
+}
+
+.copyright {
     font-size: 0.875rem;
     margin-bottom: 0;
     text-align: center;
-  }
-  
-  .copyright a, footer#colophon a {
+}
+
+.copyright a,
+footer#colophon a {
     color: inherit;
     /* Customised the text underline effect */
     text-decoration-line: underline;
-  }
-  
-  @media screen and (max-width: 767px) {
+}
+
+@media screen and (max-width: 767px) {
     #masthead .navbar-nav > li > a {
-      padding-bottom: 0.938rem;
-      padding-top: 0.938rem;
+        padding-bottom: 0.938rem;
+        padding-top: 0.938rem;
     }
-  }
-  /*--------------------------------------------------------------
+}
+
+/*--------------------------------------------------------------
   # Media Query
   --------------------------------------------------------------*/
-  /*--------------------------------------------------------------
+/*--------------------------------------------------------------
   ## Notebook
   --------------------------------------------------------------*/
-  @media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1280px) {
     html {
-      font-size: 95%;
+        font-size: 95%;
     }
-  }
-  
-  @media screen and (max-width: 1199px) {
+}
+
+@media screen and (max-width: 1199px) {
     .navbar-dark .dropdown-item {
-      color: #fff;
+        color: #fff;
     }
+
     .navbar-nav .dropdown-menu {
-      background: transparent;
-      box-shadow: none;
-      border: none;
+        background: transparent;
+        box-shadow: none;
+        border: none;
     }
-  }
-  /*--------------------------------------------------------------
+}
+
+/*--------------------------------------------------------------
   ## Netbook
   --------------------------------------------------------------*/
-  @media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
     html {
-      font-size: 90%;
+        font-size: 90%;
     }
-  }
-  /*--------------------------------------------------------------
+}
+
+/*--------------------------------------------------------------
   ## iPad
   --------------------------------------------------------------*/
-  @media only screen and (max-width: 960px) {
+@media only screen and (max-width: 960px) {
     html {
-      font-size: 85%;
+        font-size: 85%;
     }
-  }
-  /*--------------------------------------------------------------
+}
+
+/*--------------------------------------------------------------
   ## iPad
   --------------------------------------------------------------*/
-  @media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     html {
-      font-size: 80%;
+        font-size: 80%;
     }
-  }
-  /*--------------------------------------------------------------
+}
+
+/*--------------------------------------------------------------
   ## iPad
   --------------------------------------------------------------*/
-  @media only screen and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
     html {
-      font-size: 75%;
+        font-size: 75%;
     }
-  }
-  
-  
-  /*--------------------------------------------------------------
+}
+
+
+/*--------------------------------------------------------------
   # Custom CSS
   --------------------------------------------------------------*/
-  
-  /* Changing the default font to Work Sans */
-  /* This font better fit the look for the site with nice capitalised letters */
+
+/* Changing the default font to Work Sans */
+/* This font better fit the look for the site with nice capitalised letters */
 html body {
     font-family: 'Work Sans', sans-serif;
 }
 
 /*  Custom home page image */
 .home-image {
-  width: 80%
+    width: 80%
 }
- 
+
 /* Logo Custom spacing */
 /* Changes the kerning of the "Canberra" text   */
 .canberra-text {
-  letter-spacing: 0.22rem;
-  
+    letter-spacing: 0.22rem;
+
 }
 
 /* --------------------------------------- */
@@ -1162,37 +1209,37 @@ html body {
 
 /* Ivory Search CSS */
 /* Customising the Menu search function */
-.navbar-search{
-  top: 3.5px;
-  /* width: 455px; */
+.navbar-search {
+    top: 3.5px;
+    /* width: 455px; */
 }
 
-  .search-close {
-    top:12px;
-  }
+.search-close {
+    top: 12px;
+}
 
 
 /* --------------------------------------------- */
 /* WP forms custom styling (All on contact page) */
 /* --------------------------------------------- */
 
-  /* Custom Contact Form */
+/* Custom Contact Form */
 #wpforms-159-field_2-container {
-  width: 60%;
+    width: 60%;
 }
 
 /* Changing the submit button on the form */
 /* The styling is similar to the other buttons in the website */
 #wpforms-submit-159 {
-  background-color: #000;
-  color: #fff;
-  font-size: 18px;
-  padding: 12px 24px;
-  display: inline-block;
-  border:none;
-  text-align: center;
-  cursor: pointer;
-  box-shadow: none;
+    background-color: #000;
+    color: #fff;
+    font-size: 18px;
+    padding: 12px 24px;
+    display: inline-block;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: none;
 }
 
 
@@ -1203,51 +1250,55 @@ html body {
 /* The darken sets a very dark background colour behind the image*/
 /* This happens on screens greater than 1568px */
 .darken {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 125px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 125px;
 }
 
-  /* What happens on screens less than 870px and greater than 600px */
-  @media screen and (min-width: 870px) {
+/* What happens on screens less than 870px and greater than 600px */
+@media screen and (min-width: 870px) {
     .darken {
-      background: rgba(0, 0, 0, 0.5);
-      padding: 125px;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 125px;
     }
-  }
-  /* What happens on screens less than 1291px and greater than 870px */
-  @media screen and (min-width: 1291px) {
+}
+
+/* What happens on screens less than 1291px and greater than 870px */
+@media screen and (min-width: 1291px) {
     .darken {
-      background: rgba(0, 0, 0, 0.5);
-      padding: 20vh;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 20vh;
     }
-  }
-  /* What happens on screens less than 1568px and greater than 1291px */
-  @media screen and (min-width: 1568px) {
+}
+
+/* What happens on screens less than 1568px and greater than 1291px */
+@media screen and (min-width: 1568px) {
     .darken {
-      background: rgba(0, 0, 0, 0.5);
-      padding: 34vh;
-    }
-    /* Higher screen size may give better contrast, grey is the preferred colour. */
-    body:not(.theme-preset-active) #page-sub-header p {
-      color: #d4d4d4;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 34vh;
     }
 
-  }
-  /* What happens on small screens less than 500px */
-  @media screen and (max-width: 600px) {
+    /* Higher screen size may give better contrast, grey is the preferred colour. */
+    body:not(.theme-preset-active) #page-sub-header p {
+        color: #d4d4d4;
+    }
+
+}
+
+/* What happens on small screens less than 500px */
+@media screen and (max-width: 600px) {
     .darken {
-      background: rgba(0, 0, 0, 0.5);
-      padding: 40px;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 40px;
     }
 
     body:not(.theme-preset-active) #page-sub-header h1 {
-      font-size: 2rem;
+        font-size: 2rem;
     }
 
     body:not(.theme-preset-active) #page-sub-header p {
-      font-size: 1rem;
+        font-size: 1rem;
     }
-  }
+}
 
 /* ----------------------- */
 /* Single Column CSS Class */
@@ -1255,35 +1306,35 @@ html body {
 
 /* Custom paragraph spacing for single column paragraphs  */
 .wrapper-single-column {
-  margin: 1.5em 13em;
+    margin: 1.5em 13em;
 }
 
-  /* When screen is greater than 600px make the margin wider so the content is easier to read  */
-  @media screen and (min-width: 600px) {
+/* When screen is greater than 600px make the margin wider so the content is easier to read  */
+@media screen and (min-width: 600px) {
     .wrapper-single-column {
-      margin: 1.5em 5em;
+        margin: 1.5em 5em;
     }
-  }
+}
 
-    /* When screen is greater than 1200px make the margin wider so the content is easier to read   */
-    @media screen and (min-width: 1200px) {
-      .wrapper-single-column {
+/* When screen is greater than 1200px make the margin wider so the content is easier to read   */
+@media screen and (min-width: 1200px) {
+    .wrapper-single-column {
         margin: 1.5em 12em;
-      }
     }
+}
 
-  /* When the screen is less than 600px make the margin the same as other text blocks */
-  @media screen and (max-width: 600px) {
+/* When the screen is less than 600px make the margin the same as other text blocks */
+@media screen and (max-width: 600px) {
     .wrapper-single-column {
-      margin: 0 8%;
+        margin: 0 8%;
     }
-  }
+}
 
 /* When the screen is less than 300px, make the grey box text easier to read */
-@media screen and (max-width: 300px){
-  p.has-background {
-    padding: 0px !important;
-  }
+@media screen and (max-width: 300px) {
+    p.has-background {
+        padding: 0px !important;
+    }
 }
 
 /* ------------------------------- */
@@ -1292,21 +1343,21 @@ html body {
 
 /* Floats the image left */
 .search-item-image {
-  float: left;
+    float: left;
 }
 
 /* Makes the text inline, this displays it next to the image */
 .search-item-text {
-  display: inline;
+    display: inline;
 }
 
-  .search-item-text p {
+.search-item-text p {
     margin-left: 12.5em
-  }
+}
 
 /* Adjusting the margins so the content doesnt overlap */
 .entry-footer {
-  margin-left: 12.5em;
+    margin-left: 12.5em;
 }
 
 /* ------------------ */
@@ -1314,5 +1365,5 @@ html body {
 /* ------------------ */
 
 #mapp0-layout {
-  width: 100% !important;
+    width: 100% !important;
 }

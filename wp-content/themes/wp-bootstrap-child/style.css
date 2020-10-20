@@ -1299,6 +1299,13 @@ html body {
         font-size: 1rem;
     }
 }
+/* ------------ */
+/* The grey box */
+/* ------------*/
+
+.has-background {
+    padding: 5%;
+}
 
 /* ----------------------- */
 /* Single Column CSS Class */
@@ -1330,12 +1337,6 @@ html body {
     }
 }
 
-/* When the screen is less than 300px, make the grey box text easier to read */
-@media screen and (max-width: 300px) {
-    p.has-background {
-        padding: 0px !important;
-    }
-}
 
 /* ------------------------------- */
 /* CSS for each search page result */

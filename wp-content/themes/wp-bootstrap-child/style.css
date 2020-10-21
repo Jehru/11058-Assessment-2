@@ -1303,7 +1303,7 @@ html body {
 /* The grey box */
 /* ------------*/
 
-.wp-block-group > .wp-block-group__inner-container {
+.grey-box {
     padding: 5%;
 }
 
@@ -1392,4 +1392,13 @@ html body {
     header#masthead{
         margin-bottom: 10px;
     }
+}
+
+/* ------------------------------------ */
+/* House page margin  */
+/* ------------------------------------ */
+
+/* Specific margin for the house items */
+.house-block {
+    margin-bottom: 75px;
 }

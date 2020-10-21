@@ -46,5 +46,6 @@ get_header(); ?>
 	</section><!-- #primary -->
 
 <?php
-get_sidebar();
+// remove sidebar on search page as it would duplicate search bars on mobile view.
+// get_sidebar();
 get_footer('child');

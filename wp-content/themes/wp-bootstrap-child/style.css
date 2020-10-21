@@ -1368,3 +1368,28 @@ html body {
 #mapp0-layout {
     width: 100% !important;
 }
+
+/* ----------------------------- */
+/* Mobile Navigation Alignment  */
+/* ---------------------------- */
+
+/* On screens less than 1200px (when the mobile nav is activated) then make the text on the right side instead of left  */
+/* The menu icon is on the right side so the experience is more seamless for the user */
+@media screen and (max-width: 1200px){
+
+    /* Sets the text to appear on the right side */
+    #main-nav {
+        text-align: right; 
+        padding-right: 0;
+    }
+    
+    /* Sets the dropdown text to appear on the right side */
+    .dropdown-menu .dropdown-item{
+        text-align: right;
+    }
+    
+    /* Add 10 pixels to the bottom as the search bar would appear on top of the image, this gives it some extra space */
+    header#masthead{
+        margin-bottom: 10px;
+    }
+}

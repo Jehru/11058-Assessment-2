@@ -1,12 +1,9 @@
 <?php
 /**
- * The header for our theme
+ * The header is only present on the home page as other pages work fine with the parent theme
  *
  * This is the template that displays all of the <head> section and everything up until <div id="content">
  *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package WP_Bootstrap_Starter
  */
 
 ?><!DOCTYPE html>
@@ -16,9 +13,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="profile" href="http://gmpg.org/xfn/11">
-
-    <!-- Css Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;400;600;700&display=swap" rel="stylesheet">
 
 <?php wp_head(); ?>
 </head>

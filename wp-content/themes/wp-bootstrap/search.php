@@ -6,6 +6,7 @@
  *
  * @package WP_Bootstrap_Starter
  */
+// See the one in the child theme
 
 get_header(); ?>
 
@@ -28,7 +29,8 @@ get_header(); ?>
 				 * If you want to overload this in a child theme then include a file
 				 * called content-search.php and that will be used instead.
 				 */
-				get_template_part( 'template-parts/content', 'search' );
+				// get_template_part( 'template-parts/content', 'search' );
+				get_template_part ('../wp-bootstrap-child/content', 'search');
 
 			endwhile;
 

@@ -441,7 +441,7 @@ body:not(.theme-preset-active) #masthead .navbar-nav > li > a:before {
     height: 2px;
     bottom: -2px;
     left: 0;
-    background-color: #303030;
+    background-color: #5B9279;
     visibility: hidden;
     transition: all 0.3s ease-in-out;
 }
@@ -455,7 +455,8 @@ body:not(.theme-preset-active) #masthead .navbar-nav > li > a:hover:before {
 /* Current page  */
 body:not(.theme-preset-active) #masthead .navbar-nav > li.current_page_item > a {
     color: #303030;
-    border-bottom: 2px solid;
+    /* border-bottom-color: #708B75; */
+    border-bottom: 2px solid #5B9279;
 }
 
 /* End CSS Underline Effect*/
@@ -1108,7 +1109,7 @@ body:not(.theme-preset-active) footer#colophon {
 
 .copyright a,
 footer#colophon a {
-    color: inherit;
+    color: #5B9279;
     /* Customised the text underline effect */
     text-decoration-line: underline;
 }
@@ -1231,7 +1232,7 @@ html body {
 /* Changing the submit button on the form */
 /* The styling is similar to the other buttons in the website */
 #wpforms-submit-159 {
-    background-color: #000;
+    background-color: #5B9279;
     color: #fff;
     font-size: 18px;
     padding: 12px 24px;
@@ -1242,6 +1243,9 @@ html body {
     box-shadow: none;
 }
 
+#wpforms-submit-159:hover {
+    text-decoration: underline;
+}
 
 /* --------------------------- */
 /* CSS for the main home page  */
@@ -1401,4 +1405,8 @@ html body {
 /* Specific margin for the house items */
 .house-block {
     margin-bottom: 75px;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+    color: #5B9279 !important; 
 }

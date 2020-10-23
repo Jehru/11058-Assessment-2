@@ -6,20 +6,20 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area col-sm-12 col-md-12 col-lg-8">
+<section id="primary" class="content-area col-sm-12 col-lg-8">
 		<main id="main" class="site-main" role="main">
 
 		<?php
-		if ( have_posts() ) :
+		if ( have_posts() ) : ?>
 
-			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
+			<header class="page-header">
+				<?php
+					the_archive_title( '<h1 class="page-title">', '</h1>' );
+					the_archive_description( '<div class="archive-description">', '</div>' );
+				?>
+			</header><!-- .page-header -->
 
 			<?php
-			endif;
-
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
 
@@ -42,7 +42,7 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</section><!-- #primary -->
-
+	
 <?php
 // No sidebar please
 // get_sidebar();

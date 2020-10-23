@@ -1109,7 +1109,7 @@ body:not(.theme-preset-active) footer#colophon {
 
 .copyright a,
 footer#colophon a {
-    color: inherit;
+    color: #5B9279;
     /* Customised the text underline effect */
     text-decoration-line: underline;
 }
@@ -1232,7 +1232,7 @@ html body {
 /* Changing the submit button on the form */
 /* The styling is similar to the other buttons in the website */
 #wpforms-submit-159 {
-    background-color: #000;
+    background-color: #5B9279;
     color: #fff;
     font-size: 18px;
     padding: 12px 24px;
@@ -1243,6 +1243,9 @@ html body {
     box-shadow: none;
 }
 
+#wpforms-submit-159:hover {
+    text-decoration: underline;
+}
 
 /* --------------------------- */
 /* CSS for the main home page  */

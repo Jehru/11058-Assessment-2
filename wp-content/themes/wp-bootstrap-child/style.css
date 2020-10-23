@@ -1407,6 +1407,7 @@ html body {
     margin-bottom: 75px;
 }
 
+/* Changing the toggler icon colour */
 .navbar-toggler .navbar-toggler-icon {
     color: #5B9279 !important; 
 }
